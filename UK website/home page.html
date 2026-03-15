@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozis - Global Technology Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .text-blue-accent {
+            color: #3B82F6; /* A common blue shade */
+        }
+        .bg-blue-accent {
+            background-color: #3B82F6;
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased">
+
+    <!-- 1. Navigation bar -->
+    <header class="bg-black border-b border-gray-800 sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <a href="/" class="flex items-center space-x-2">
+                <img src="https://www.technozis.com/static/images/brand-logo.svg" alt="Technozis Logo" class="h-8">
+            </a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#solutions" class="text-white hover:text-blue-accent transition-colors duration-300 font-medium">Solutions</a>
+                <a href="#services" class="text-white hover:text-blue-accent transition-colors duration-300 font-medium">Services</a>
+                <a href="#industries" class="text-white hover:text-blue-accent transition-colors duration-300 font-medium">Industries</a>
+                <a href="#about" class="text-white hover:text-blue-accent transition-colors duration-300 font-medium">About Us</a>
+                <a href="#careers" class="text-white hover:text-blue-accent transition-colors duration-300 font-medium">Careers</a>
+                <a href="#contact" class="text-white hover:text-blue-accent transition-colors duration-300 font-medium">Contact Us</a>
+            </div>
+            <a href="#contact" class="hidden lg:block bg-blue-accent hover:bg-blue-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md transition-all duration-300">
+                Get in Touch
+            </a>
+            <button class="lg:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 2. Hero section -->
+        <section class="relative py-20 md:py-32 overflow-hidden bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                        Your <span class="text-blue-accent">Global Partner</span> in Digital Transformation
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0 animate-fade-in-up delay-100">
+                        Technozis empowers enterprises worldwide with innovative technology solutions, expert consulting, and agile engineering teams to drive growth and operational excellence.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up delay-200">
+                        <a href="#services" class="bg-blue-accent hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Explore Our Services
+                        </a>
+                        <a href="#contact" class="border border-blue-accent text-blue-accent hover:bg-blue-accent hover:text-white font-semibold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Get a Consultation
+                        </a>
+                    </div>
+                </div>
+                <div class="relative flex justify-center lg:justify-end animate-fade-in-right delay-300">
+                    <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="Hero Image: Global technology team collaboration" class="rounded-2xl shadow-xl w-full max-w-lg lg:max-w-none h-auto object-cover object-center transform hover:scale-102 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-2xl"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Technologies section -->
+        <section class="py-16 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+                    Powering Innovation with Leading Technologies
+                </h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-center max-w-6xl mx-auto">
+                    <div class="p-4 bg-gray-800 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex justify-center">
+                        <img src="https://www.technozis.com/static/images/services/salesforce.svg" alt="Salesforce Logo" class="h-12 w-auto filter grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex justify-center">
+                        <img src="https://www.technozis.com/static/images/services/powerbi.svg" alt="PowerBI Logo" class="h-12 w-auto filter grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex justify-center">
+                        <img src="https://www.technozis.com/static/images/services/aws.svg" alt="AWS Logo" class="h-12 w-auto filter grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex justify-center">
+                        <img src="https://www.technozis.com/static/images/services/oracle.svg" alt="Oracle Logo" class="h-12 w-auto filter grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg" alt="SAP Logo" class="h-12 w-auto filter grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex justify-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="Generative AI Logo" class="h-12 w-auto filter grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Community / ecosystem section -->
+        <section class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative flex justify-center lg:justify-start">
+                    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="Diverse team collaborating" class="rounded-2xl shadow-xl w-full max-w-lg h-auto object-cover object-center transform hover:scale-102 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-2xl"></div>
+                </div>
+                <div class="text-center lg:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                        A Thriving Global <span class="text-blue-accent">Community</span> and Ecosystem
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Technozis cultivates a vibrant ecosystem of talent, partners, and clients across continents. Our collaborative approach drives innovation and delivers impactful results.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-md border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300">
+                            <p class="text-4xl font-bold text-blue-accent mb-2">15+</p>
+                            <p class="text-gray-300 text-lg">Years of Experience</p>
+                        </div>
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-md border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300">
+                            <p class="text-4xl font-bold text-blue-accent mb-2">500+</p>
+                            <p class="text-gray-300 text-lg">Successful Projects</p>
+                        </div>
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-md border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300">
+                            <p class="text-4xl font-bold text-blue-accent mb-2">10+</p>
+                            <p class="text-gray-300 text-lg">Countries Served</p>
+                        </div>
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-md border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300">
+                            <p class="text-4xl font-bold text-blue-accent mb-2">100%</p>
+                            <p class="text-gray-300 text-lg">Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Services section -->
+        <section id="services" class="py-20 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Our <span class="text-blue-accent">Core Capabilities</span>
+                </h2>
+                <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
+                    From strategic consulting to robust implementation, Technozis offers a comprehensive suite of services designed to accelerate your digital journey.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9.25 20.25M12 14V3m-4 9H2.75M16 12h5.25m-7 5.25L17.25 20.25M16 16h-4M8 16h4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Cloud Solutions</h3>
+                        <p class="text-gray-400">
+                            Harness the power of the cloud with our expert services, covering migration, infrastructure, and native application development on AWS, Azure, and GCP.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 4l-4 4 4 4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Custom Software Development</h3>
+                        <p class="text-gray-400">
+                            Build scalable, robust, and innovative software solutions tailored to your unique business needs, from enterprise applications to mobile apps.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0h6"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Data & Analytics</h3>
+                        <p class="text-gray-400">
+                            Transform raw data into actionable insights. Our services include data warehousing, business intelligence, and advanced analytics for informed decision-making.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 20v-5.25m0-7.5c0-1.284.6-2.457 1.571-3.23"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">AI & Machine Learning</h3>
+                        <p class="text-gray-400">
+                            Leverage artificial intelligence and machine learning to automate processes, enhance customer experiences, and unlock new business opportunities.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">DevOps & Automation</h3>
+                        <p class="text-gray-400">
+                            Accelerate your development cycles and improve operational efficiency with our DevOps implementation, CI/CD pipelines, and automation strategies.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 12c0 2.21.914 4.298 2.588 5.868a13.452 13.452 0 001.394 1.274C7.68 19.864 9.356 21 12 21c2.644 0 4.32-1.136 5.018-1.998a13.452 13.000 0 001.394-1.274C20.086 16.298 21 14.21 21 12a12.01 12.01 0 00-.382-7.016z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Cybersecurity</h3>
+                        <p class="text-gray-400">
+                            Protect your critical assets and data from evolving threats with our comprehensive cybersecurity strategies, compliance, and risk management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Why choose Technozis section -->
+        <section class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Why Partner with <span class="text-blue-accent">Technozis?</span>
+                </h2>
+                <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
+                    We combine technical prowess with a deep understanding of business challenges to deliver unparalleled value.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:translate-y-[-5px] transition-all duration-300 group">
+                        <div class="text-blue-accent mb-4 flex justify-center">
+                            <svg class="w-10 h-10 group-hover:rotate-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Innovation at Core</h3>
+                        <p class="text-gray-400 text-sm">
+                            Driving forward with cutting-edge technologies and creative solutions to solve complex problems.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:translate-y-[-5px] transition-all duration-300 group">
+                        <div class="text-blue-accent mb-4 flex justify-center">
+                            <svg class="w-10 h-10 group-hover:rotate-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 4V2m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8v-2m0 2a2 2 0 100-4m0 4a2 2 0 110-4m-6 8H4m0 0a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6H2m18 0h2"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Global Expertise</h3>
+                        <p class="text-gray-400 text-sm">
+                            Leveraging diverse talent and international insights to deliver world-class solutions.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:translate-y-[-5px] transition-all duration-300 group">
+                        <div class="text-blue-accent mb-4 flex justify-center">
+                            <svg class="w-10 h-10 group-hover:rotate-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 12c0 2.21.914 4.298 2.588 5.868a13.452 13.452 0 001.394 1.274C7.68 19.864 9.356 21 12 21c2.644 0 4.32-1.136 5.018-1.998a13.452 13.000 0 001.394-1.274C20.086 16.298 21 14.21 21 12a12.01 12.01 0 00-.382-7.016z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Client-Centric Approach</h3>
+                        <p class="text-gray-400 text-sm">
+                            Prioritizing your success with tailored strategies and dedicated support every step of the way.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:translate-y-[-5px] transition-all duration-300 group">
+                        <div class="text-blue-accent mb-4 flex justify-center">
+                            <svg class="w-10 h-10 group-hover:rotate-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 20v-5.25m0-7.5c0-1.284.6-2.457 1.571-3.23"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Sustainable Value</h3>
+                        <p class="text-gray-400 text-sm">
+                            Building long-term partnerships and delivering solutions that yield lasting business impact.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. High-performance engineering teams section -->
+        <section class="py-20 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Empowering Your Vision with <span class="text-blue-accent">High-Performance Engineering Teams</span>
+                </h2>
+                <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+                    Access elite engineering talent that integrates seamlessly with your existing workflows, bringing agility, expertise, and dedication to every project.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 text-left">
+                        <h3 class="text-xl font-semibold text-white mb-3">Agile Methodologies</h3>
+                        <p class="text-gray-400 text-sm">
+                            Rapid iteration and delivery through Scrum and Kanban frameworks.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 text-left">
+                        <h3 class="text-xl font-semibold text-white mb-3">Scalable Resources</h3>
+                        <p class="text-gray-400 text-sm">
+                            Flexibly scale your team up or down based on project demands.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 text-left">
+                        <h3 class="text-xl font-semibold text-white mb-3">Dedicated Experts</h3>
+                        <p class="text-gray-400 text-sm">
+                            Engineers deeply committed to your project's success and goals.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 text-left">
+                        <h3 class="text-xl font-semibold text-white mb-3">Seamless Integration</h3>
+                        <p class="text-gray-400 text-sm">
+                            Teams that quickly adapt to your culture and existing development practices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Expert consulting section -->
+        <section class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                        Strategic Consulting, <span class="text-blue-accent">Tailored for Your Success</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Navigate the complexities of the digital landscape with Technozis' expert consulting services. We provide strategic guidance to optimize your technology investments and achieve business objectives.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start bg-gray-900 p-5 rounded-xl border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-3px] transition-all duration-300 group">
+                            <div class="flex-shrink-0 text-blue-accent text-3xl font-bold mr-4">01</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Discovery & Strategy</h3>
+                                <p class="text-gray-400 text-sm">
+                                    Thorough assessment of your current state, identifying opportunities and crafting a robust digital roadmap.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 p-5 rounded-xl border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-3px] transition-all duration-300 group">
+                            <div class="flex-shrink-0 text-blue-accent text-3xl font-bold mr-4">02</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Solution Architecture</h3>
+                                <p class="text-gray-400 text-sm">
+                                    Designing scalable and resilient technology architectures that align with your strategic goals.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 p-5 rounded-xl border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-3px] transition-all duration-300 group">
+                            <div class="flex-shrink-0 text-blue-accent text-3xl font-bold mr-4">03</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Implementation & Support</h3>
+                                <p class="text-gray-400 text-sm">
+                                    Guiding the execution phase and ensuring smooth adoption with ongoing support and optimization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-center lg:justify-end">
+                    <img src="https://images.pexels.com/photos/7567434/pexels-photo-7567434.jpeg" alt="Consulting meeting" class="rounded-2xl shadow-xl w-full max-w-lg h-auto object-cover object-center transform hover:scale-102 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-2xl"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Achievements / statistics section -->
+        <section class="py-20 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+                    Our Impact in <span class="text-blue-accent">Numbers</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-105 transition-all duration-300">
+                        <p class="text-5xl font-extrabold text-blue-accent mb-3">98%</p>
+                        <p class="text-xl text-white font-semibold">Client Retention</p>
+                        <p class="text-gray-400 text-sm mt-2">
+                            A testament to our commitment and quality of service.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-105 transition-all duration-300">
+                        <p class="text-5xl font-extrabold text-blue-accent mb-3">250+</p>
+                        <p class="text-xl text-white font-semibold">Certified Experts</p>
+                        <p class="text-gray-400 text-sm mt-2">
+                            A global team with diverse certifications and deep industry knowledge.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-105 transition-all duration-300">
+                        <p class="text-5xl font-extrabold text-blue-accent mb-3">30%</p>
+                        <p class="text-xl text-white font-semibold">Average ROI Increase</p>
+                        <p class="text-gray-400 text-sm mt-2">
+                            Delivering tangible business value and measurable returns for our clients.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-105 transition-all duration-300">
+                        <p class="text-5xl font-extrabold text-blue-accent mb-3">1M+</p>
+                        <p class="text-xl text-white font-semibold">Hours of Engineering</p>
+                        <p class="text-gray-400 text-sm mt-2">
+                            Extensive experience in building and maintaining robust technology solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 10. Footer -->
+    <footer class="bg-black py-16 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 text-center md:text-left">
+                <div class="col-span-1 lg:col-span-2">
+                    <a href="/" class="inline-block mb-4">
+                        <img src="https://www.technozis.com/static/images/brand-logo.svg" alt="Technozis Logo" class="h-10">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-sm mx-auto md:mx-0">
+                        Technozis is a global technology partner empowering enterprises with innovative solutions, strategic consulting, and high-performance engineering.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5">Expertise</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">Cloud & DevOps</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">Software Development</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">Data & AI</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">Cybersecurity</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">About Us</a></li>
+                        <li><a href="#careers" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">Partners</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-5">Contact</h3>
+                    <ul class="space-y-3">
+                        <li><a href="mailto:info@technozis.com" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">info@technozis.com</a></li>
+                        <li><a href="tel:+1-555-123-4567" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">+1 (555) 123-4567</a></li>
+                        <li><address class="not-italic text-gray-400">123 Tech Drive, Innovation City, CA 90210</address></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; <span id="currentYear"></span> Technozis. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.007-.532A8.318 8.318 0 0022 5.92a8.135 8.135 0 01-2.357.646A4.134 4.134 0 0021.608 4.1h-.008c-.751.7-1.614 1.258-2.52 1.624a8.15 8.15 0 01-4.755-1.924c-1.372-1.002-3.14-1.257-4.774-.683-.823.298-1.554.778-2.148 1.39A4.144 4.144 0 004.997 10.39c-1.218.497-2.308.995-3.398 1.5l.006.002c1.78.89 3.52 1.565 5.21 2.029a4.136 4.136 0 00-.007 2.126c-.308 1.353-.96 2.585-1.903 3.65A8.204 8.204 0 0011 22.016a8.288 8.288 0 007.007-4.18c.026.005.05.008.077.013a8.153 8.153 0 01-1.026.096A8.106 8.106 0 008.29 20.251zm3.7-10.749h-.002v.002zm1.688 1.706h-.001v.002z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.44 2.06c.71-.34 1.42-.51 2.13-.51 4.5 0 8.03 3.53 8.03 8.03 0 .7-.1 1.38-.28 2.02l.7 2.62c.26 1.01-.73 1.9-1.74 1.63L19.5 17.68c-.64.18-1.31.28-2.02.28-4.5 0-8.03-3.53-8.03-8.03 0-.71.17-1.42.51-2.13L2.06 12.44c-.34-.71-.51-1.42-.51-2.13 0-4.5 3.53-8.03 8.03-8.03.71 0 1.42.17 2.13.51l.03.03zm-1.07 10.95a1.27 1.27 0 10-.001-2.54 1.27 1.27 0 00.001 2.54zm3.87-3.87a1.27 1.27 0 10-.001-2.54 1.27 1.27 0 00.001 2.54z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-accent transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 5.084 3.659 9.332 8.433 10.187v-7.135H7.078V12h2.355V9.403c0-2.348 1.408-3.64 3.54-3.64 1.01 0 1.873.075 2.128.109v2.424h-1.42c-1.125 0-1.343.535-1.343 1.326V12h2.983l-.478 2.92h-2.505v7.135C18.341 21.332 22 17.084 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
