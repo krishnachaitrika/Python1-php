@@ -1,0 +1,543 @@
+const html = `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>career</title>
+
+<link rel="icon" type="image/png" href="https://www.technozis.com/static/images/brand-logo-2.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* NAVBAR */
+
+.navbar{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+z-index:10;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(8px);
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+}
+
+.logo img{
+height:34px;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-size:16px;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#4da3ff;
+}
+
+
+/* FIX HERO OVERLAY */
+
+.hero{
+position:relative;
+z-index:1;
+}
+
+.hero::before{
+z-index:0;
+}
+
+body{
+background:#000;
+color:white;
+font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+}
+
+
+.hero{
+height:90vh;
+background:url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover no-repeat;
+display:flex;
+align-items:center;
+padding-left:8%;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.65);
+}
+
+.hero-content{
+position:relative;
+max-width:600px;
+}
+
+.hero h1{
+font-size:64px;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#ddd;
+font-size:18px;
+line-height:1.6;
+margin-bottom:25px;
+}
+
+.hero-btn{
+background:#3b82f6;
+border:none;
+padding:14px 28px;
+border-radius:30px;
+color:white;
+cursor:pointer;
+}
+
+
+/* SECTIONS */
+
+.section{
+padding:80px 8%;
+background:#000;
+}
+
+.section h2{
+font-size:36px;
+margin-bottom:40px;
+}
+
+
+/* GRID LAYOUT */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+
+/* CARDS */
+
+.card{
+background:#111;
+border:1px solid #222;
+border-radius:12px;
+padding:30px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#444;
+}
+
+.card img{
+width:40px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#aaa;
+line-height:1.5;
+}
+</style>
+</head>
+
+<body>
+<nav class="flex justify-between items-center px-12 py-6 bg-black border-b border-gray-800">
+
+<div class="flex items-center">
+
+<img 
+src="https://www.technozis.com/static/images/brand-logo.svg"
+class="h-8"
+/>
+
+</div>
+
+<div class="space-x-8 text-gray-300">
+
+<a href="#">Careers</a>
+<a href="#">Business</a>
+<a href="#">About us </a>
+<a href="#">Contact us </a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Build the Future<br>with Technozis</h1>
+
+<p>
+At Technozis, we're not just building solutions—we're building careers.
+Join a dynamic, future-focused team where your work matters.
+</p>
+
+<button class="hero-btn">Explore Open Roles</button>
+
+</div>
+
+</section>
+<section class="section">
+
+<h2>Why Join Technozis?</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/globe.png">
+<h3>Global Exposure</h3>
+<p>Work with global clients across industries and geographies.</p>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/book.png">
+<h3>Continuous Learning</h3>
+<p>Access mentorship, certifications and hands-on training.</p>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/diamond.png">
+<h3>Meaningful Projects</h3>
+<p>Deliver impactful work that drives business transformation.</p>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/growth.png">
+<h3>Career Progression</h3>
+<p>Structured growth paths tailored to your ambitions.</p>
+</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<h2>Life @ Technozis</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/airplane-take-off.png">
+<h3>Supportive collaborative work culture</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/globe.png">
+<h3>Transparent performance frameworks</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/book.png">
+<h3>Flexible hybrid work arrangements</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/stethoscope.png">
+<h3>Team events and recognition programs</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/medal.png">
+<h3>Skill development sessions</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/ticket.png">
+<h3>Open door leadership</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/party.png">
+<h3>Employee referral rewards</h3>
+</div>
+
+<div class="card">
+<img src="https://img.icons8.com/ios-filled/50/ffffff/star.png">
+<h3>Zero bureaucracy ownership roles</h3>
+</div>
+
+</div>
+
+</section>
+<section style="background:#000;color:white;padding:100px 8%;font-family:Arial,sans-serif;">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:60px;gap:40px;">
+
+<h2 style="font-size:40px;">Who We’re Looking For</h2>
+
+<p style="max-width:500px;color:#aaa;line-height:1.6;">
+We’re expanding rapidly and are on the lookout for skilled professionals who thrive in a collaborative, fast-paced environment.
+</p>
+
+</div>
+
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;">
+
+
+<div style="background:#111;border:1px solid #222;border-radius:16px;padding:40px;">
+
+<img src="https://api.dicebear.com/7.x/avataaars/svg?seed=dev"
+style="width:70px;height:70px;border-radius:50%;margin-bottom:20px;">
+
+<h3 style="font-size:20px;margin-bottom:15px;">
+ServiceNow Developers And Architects
+</h3>
+
+<p style="color:#aaa;line-height:1.5;">
+Lead end-to-end implementations across enterprise platforms.
+</p>
+
+</div>
+
+
+
+<div style="background:#111;border:1px solid #222;border-radius:16px;padding:40px;">
+
+<img src="https://api.dicebear.com/7.x/avataaars/svg?seed=manager"
+style="width:70px;height:70px;border-radius:50%;margin-bottom:20px;">
+
+<h3 style="font-size:20px;margin-bottom:15px;">
+Product Managers And Business Analysts
+</h3>
+
+<p style="color:#aaa;line-height:1.5;">
+Shape product vision and deliver customer-centric solutions.
+</p>
+
+</div>
+
+
+
+<div style="background:#111;border:1px solid #222;border-radius:16px;padding:40px;">
+
+<img src="https://api.dicebear.com/7.x/avataaars/svg?seed=data"
+style="width:70px;height:70px;border-radius:50%;margin-bottom:20px;">
+
+<h3 style="font-size:20px;margin-bottom:15px;">
+AI, Data, And DevOps Engineers
+</h3>
+
+<p style="color:#aaa;line-height:1.5;">
+Build scalable, intelligent, and efficient digital ecosystems.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+<section style="background:#000;color:white;padding:100px 8%;font-family:Arial, sans-serif;display:flex;align-items:center;gap:60px;flex-wrap:wrap;">
+
+<!-- IMAGE -->
+
+<div style="flex:1;min-width:320px;">
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
+style="width:100%;border-radius:18px;object-fit:cover;">
+
+</div>
+
+
+<!-- TEXT -->
+
+<div style="flex:1;min-width:320px;max-width:520px;">
+
+<h2 style="font-size:42px;margin-bottom:20px;">
+Join Our Growing ServiceNow Community
+</h2>
+
+<p style="color:#bbb;line-height:1.6;margin-bottom:35px;">
+Our ecosystem goes beyond project work. We have built a strong community
+of ServiceNow enthusiasts — a space where professionals share knowledge,
+explore trends, and connect over coffee (virtual or real).
+</p>
+
+<a href="#"
+style="display:inline-block;background:#5b8cff;color:white;padding:16px 28px;border-radius:30px;text-decoration:none;font-weight:500;">
+Join The Community →
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="bg-black border-t border-gray-800 py-16 px-10">
+
+<div class="max-w-7xl mx-auto grid md:grid-cols-5 gap-10 text-sm">
+
+<!-- COMPANY -->
+
+<div>
+
+<h2 class="text-xl font-bold mb-4">
+TECHNOZIS
+</h2>
+
+<p class="text-gray-400 mb-6">
+We help businesses build, deploy and operate premium professional services on modern technology stacks.
+</p>
+
+<div class="text-gray-400">
+India | Dubai | Australia | USA
+</div>
+
+</div>
+
+
+<!-- EXPERTISE -->
+
+<div>
+
+<h3 class="text-white font-semibold mb-4">
+Our Expertise
+</h3>
+
+<ul class="space-y-2 text-gray-400">
+
+<li>ServiceNow</li>
+<li>Salesforce</li>
+<li>Data Analytics</li>
+<li>Open AI</li>
+<li>Oracle</li>
+<li>SAP</li>
+<li>Cloud & Infra</li>
+<li>Mobility Development</li>
+
+</ul>
+
+</div>
+
+
+<!-- BUSINESS -->
+
+<div>
+
+<h3 class="text-white font-semibold mb-4">
+Business
+</h3>
+
+<ul class="space-y-2 text-gray-400">
+
+<li>Professional Services</li>
+<li>Managed IT Services</li>
+<li>Develop & Operate</li>
+
+</ul>
+
+</div>
+
+
+<!-- EMPLOYEES -->
+
+<div>
+
+<h3 class="text-white font-semibold mb-4">
+Employees
+</h3>
+
+<ul class="space-y-2 text-gray-400">
+
+<li>Careers</li>
+<li>Community</li>
+<li>Culture</li>
+<li>Open Roles</li>
+
+</ul>
+
+</div>
+
+
+<!-- COMPANY -->
+
+<div>
+
+<h3 class="text-white font-semibold mb-4">
+Company
+</h3>
+
+<ul class="space-y-2 text-gray-400">
+
+<li>About Us</li>
+<li>Contact Us</li>
+<li>Privacy Policy</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- ADDRESS -->
+
+<div class="max-w-7xl mx-auto mt-12 border-t border-gray-800 pt-6 text-gray-500 text-sm">
+
+<p>
+DCG2-0210, DLF Corporate Green, Sector 74A, Gurugram, Haryana, India
+</p>
+
+<p class="mt-2">
+careers@technozis.com
+</p>
+
+</div>
+
+
+</footer>
+
+
+
+</body>
+</html>
+`;
+
+return [
+{
+binary: {
+data: {
+data: Buffer.from(html).toString('base64'),
+mimeType: 'text/html',
+fileName: 'technizis-report.html'
+}
+}
+}
+];
