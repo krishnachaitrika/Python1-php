@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozis Business Page</title>
+
+<link rel="icon" type="image/png" href="https://www.technozis.com/static/images/brand-logo-2.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #3b82f6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Global Background */
+        .bg-global {
+            background: linear-gradient(to bottom, #0B1120, #000000);
+        }
+        /* Glow effect for cards */
+        .card-glow {
+            transition: all 0.3s ease-in-out;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+            transform: translateY(-5px);
+        }
+        /* Button glow */
+        .btn-glow {
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            transform: scale(1.02);
+        }
+        /* Section Divider Glow */
+        .divider-glow {
+            background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.05), transparent);
+        }
+        /* Hero Glow */
+        .hero-glow {
+            background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent);
+        }
+    </style>
+</head>
+<body class="bg-global text-white min-h-screen">
+
+    <!-- 1. NAVBAR -->
+    <header class="sticky top-0 z-50 bg-gray-900/50 backdrop-blur-md border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-8 text-white" alt="Logo">
+            </a>
+            <!-- Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#what-we-do" class="hover:text-blue-400 transition duration-300">What we do</a>
+                <a href="C:\Users\krishna chaitrika\OneDrive\Desktop\UK website\career page.html" class="hover:text-blue-400 transition duration-300">Careers</a>
+                <a href= "C:\Users\krishna chaitrika\OneDrive\Desktop\UK website\business page (2).html" class="hover:text-blue-400 transition duration-300">Business</a>
+                <a href="#about" class="hover:text-blue-400 transition duration-300">About Us</a>
+                <a href="#contact" class="hover:text-blue-400 transition duration-300">Contact Us</a>
+            </div>
+            <!-- Mobile Menu Button (Optional, for completeness) -->
+            <button class="md:hidden text-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+    <!-- Main Content Wrapper -->
+    <main>
+        
+        <!-- 2. HERO SECTION -->
+        <section class="pt-24 pb-32 relative overflow-hidden hero-glow">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- LEFT CONTENT -->
+                    <div>
+                        <p class="text-blue-400 font-semibold mb-4 text-lg uppercase tracking-widest">Professional Services</p>
+                        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                            Transforming Vision into <br class="hidden sm:inline"/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Digital Reality.</span>
+                        </h1>
+                        <p class="text-lg text-gray-400 mb-8 max-w-lg">
+                            We engineer robust, scalable solutions that drive efficiency and innovation across your entire technology landscape. Expertise you can trust for mission-critical success.
+                        </p>
+                            
+                    </div>
+
+                    <!-- RIGHT IMAGE -->
+                    <div class="order-first lg:order-last">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" 
+                             alt="Digital Transformation" 
+                             class="w-full h-auto object-cover rounded-[2rem] shadow-2xl shadow-blue-900/50 transform hover:scale-[1.01] transition duration-500 border border-blue-500/20">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="h-16 divider-glow"></div>
+
+        <!-- 3. CORE OFFERINGS -->
+        <section id="what-we-do" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Core Offerings</h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto">Seamless integration of cutting-edge technology to solve complex business challenges.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    
+                    <!-- Card 1 -->
+                    <div class="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md card-glow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-300">Cloud Infrastructure</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Architecting resilient, multi-cloud environments optimized for performance and cost efficiency.</p>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Serverless Deployment</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Data Migration & Strategy</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> 24/7 Cloud Monitoring</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md card-glow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-300">Enterprise Software</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Custom development of high-throughput business applications tailored precisely to your workflows.</p>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Modern React/Vue Frameworks</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> API Gateway Development</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Legacy System Modernization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md card-glow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-300">Cybersecurity Audits</h3>
+                        <p class="text-gray-400 mb-4 flex-grow">Proactive security posture management utilizing AI-driven threat detection and compliance frameworks.</p>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Penetration Testing (Pen-Test)</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Compliance & Governance (SOC2)</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Incident Response Planning</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="h-16 divider-glow"></div>
+
+        <!-- 4. WHY CHOOSE OUR PROFESSIONAL SERVICES -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- LEFT IMAGE -->
+                    <div class="order-2 lg:order-1">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" 
+                             alt="Professional Consulting" 
+                             class="w-full h-auto object-cover rounded-3xl shadow-xl border border-blue-500/10 transform hover:scale-[1.01] transition duration-500">
+                    </div>
+
+                    <!-- RIGHT CONTENT -->
+                    <div class="order-1 lg:order-2">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Why Choose Our Professional Services?</h2>
+                        <p class="text-lg text-gray-400 mb-8">
+                            We bring deep domain expertise, blending strategic insight with technical execution to ensure your projects deliver tangible ROI.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-6 h-6 mt-1 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-300 font-medium">Certified Technologists</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-6 h-6 mt-1 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-300 font-medium">Predictable Budgeting</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-6 h-6 mt-1 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-300 font-medium">Agile Delivery Models</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-6 h-6 mt-1 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-300 font-medium">Focus on Business Outcomes</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg class="w-6 h-6 mt-1 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-300 font-medium">Dedicated Senior Architects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DIVIDER -->
+        <div class="h-16 divider-glow"></div>
+
+
+        <!-- 5. WHY CHOOSE US FOR MANAGED IT SERVICES -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- LEFT CONTENT -->
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Managed IT Services: Peace of Mind.</h2>
+                        <p class="text-lg text-gray-400 mb-8">
+                            Ensure peak operational uptime with our proactive, enterprise-grade managed services. We handle the complexity so you can focus on strategy.
+                        </p>
+                        
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-center text-lg">
+                                <svg class="w-6 h-6 mr-3 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Proactive Infrastructure Monitoring 24/7/365
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <svg class="w-6 h-6 mr-3 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                SLA-backed response times and guaranteed resolution.
+                            </li>
+                            <li class="flex items-center text-lg">
+                                <svg class="w-6 h-6 mr-3 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Strategic Technology Roadmapping Included
+                            </li>
+                        </ul>
+                        <a href="#" class="mt-8 inline-block px-8 py-3 bg-transparent border-2 border-blue-500 text-blue-400 font-semibold rounded-full hover:bg-blue-500/10 btn-glow">
+                            View Managed Service Plans
+                        </a>
+                    </div>
+
+                    <!-- RIGHT IMAGE -->
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" 
+                             alt="IT Team Management" 
+                             class="w-full h-auto object-cover rounded-3xl shadow-xl border border-blue-500/10 transform hover:scale-[1.01] transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SECTION DIVIDER -->
+    <div class="h-24 divider-glow"></div>
+
+    <!-- 6. FOOTER -->
+    <footer class="pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <!-- Top Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-10 border-b border-white/10 pb-12 mb-8">
+                
+                <!-- Column 1 (Logo & Social) -->
+                <div class="col-span-2 md:col-span-1">
+                    <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-9 mb-4" alt="Logo">
+                    <p class="text-sm text-gray-400 mb-6 max-w-xs">
+                        Leading the next generation of digital transformation with precision engineering and strategic consultancy.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Social Icons Placeholder -->
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 6.21c-.78.35-1.61.58-2.48.68.89-.53 1.57-1.37 1.89-2.39-.83.5-1.75.86-2.72 1.06-.78-.83-1.89-1.34-3.11-1.34-2.34 0-4.24 1.9-4.24 4.24 0 .33.04.65.11.96-3.5-.18-6.6-1.85-8.68-4.4-.36.62-.57 1.34-.57 2.1 0 1.46.74 2.75 1.87 3.5-.69-.02-1.34-.21-1.91-.53v.05c0 2.04 1.45 3.74 3.37 4.13-.35.09-.72.14-1.1.14-.27 0-.53-.03-.78-.07.54 1.69 2.11 2.93 3.97 2.97-1.45 1.14-3.28 1.82-5.27 1.82-.34 0-.68-.02-1.01-.06 1.87 1.2 4.09 1.93 6.5 1.93 7.79 0 12.05-6.45 12.05-12.05 0-.18-.01-.36-.02-.54.83-.6 1.56-1.35 2.14-2.19z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.16 6.18c-1.1.48-2.27.8-3.48.87a4.33 4.33 0 001.94-2.44 4.32 4.32 0 01-1.72.66c-.49-.52-1.19-1.13-1.91-1.36a4.32 4.32 0 00-2.05-.57c-2.61 0-4.72 2.11-4.72 4.71 0 .37.04.72.11 1.06C8.01 8.15 4.94 6.53 2.88 3.98a4.66 4.66 0 00.64 6.02c-.72-.22-1.39-.56-2-1.07 0 .05.01.1.02.15a4.7 4.7 0 003.87 4.62c-.41.11-.84.17-1.28.17-.31 0-.61-.03-.9-.08.62 1.94 2.41 3.36 4.54 3.4a7.62 7.62 0 01-4.75 1.63c-.31 0-.62-.02-.92-.05a10.73 10.73 0 005.83 1.71c6.99 0 10.83-5.79 10.83-10.83 0-.16-.01-.33-.01-.49.75-.54 1.41-1.21 1.93-1.97z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.2 6.37h-1.32v.88c0 .85-.27 1.51-.79 1.97-.52.46-1.26.73-2.2.73h-2.22v7.25h-1.32v-7.25h-2.22v-1.1h2.22V8.5c0-1.32.47-2.14 1.4-2.47.56-.19 1.18-.32 1.85-.32h2.22v1.29zm-5.61 12.77c.68 0 1.24-.1 1.67-.31.43-.21.77-.53 1.01-.94.24-.41.36-.89.36-1.44v-1.52h-3.3v1.52c0 .36.09.69.27.98.18.29.45.51.82.66z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Our Expertise -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Our Expertise</h4>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Cloud Solutions</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Software Development</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">DevOps Automation</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Data Engineering</a>
+                </div>
+
+                <!-- Column 3: Business -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Business</h4>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Client Success Stories</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Pricing & Tiers</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Partnerships</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Service Level Agreement</a>
+                </div>
+
+                <!-- Column 4: Employees -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Employees</h4>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Careers Portal</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Team Culture</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Benefits</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Employee Login</a>
+                </div>
+
+                <!-- Column 5: Company -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Company</h4>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Our Mission</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Press & Media</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Terms of Service</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Privacy Policy</a>
+                </div>
+            </div>
+
+            <!-- Bottom Contact Info -->
+            <div class="text-center md:text-left text-sm text-gray-500 space-y-1">
+                <p>
+                    <span class="font-medium text-gray-300 mr-4">Address:</span> 100 Corporate Drive, Suite 500, Tech City, CA 90210
+                </p>
+                <p>
+                    <span class="font-medium text-gray-300 mr-4">Email:</span> <a href="mailto:contact@technozis.com" class="hover:text-blue-400">contact@technozis.com</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>

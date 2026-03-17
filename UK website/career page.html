@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Technozis Careers</title>
+
+<link rel="icon" type="image/png" href="https://www.technozis.com/static/images/brand-logo-2.png">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,22 +25,27 @@
   </script>
 </head>
 <body class="bg-black text-white font-sans">
-  <!-- Navbar -->
-  <nav class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-    <div class="flex items-center space-x-4">
-      <img src="https://www.technozis.com/static/images/brand-logo.svg" alt="Technozis Logo" class="h-8">
-      <ul class="hidden md:flex space-x-6 text-sm">
-        <li><a href="C:\Users\krishna chaitrika\OneDrive\Desktop\UK website\home page.html" class="hover:text-primary">Homepage</a></li>
-        <li><a href="#" class="hover:text-primary">Services</a></li>
-        <li><a href="#" class="hover:text-primary">Industries</a></li>
-        <li><a href="#" class="hover:text-primary">About Us</a></li>
-        <li><a href="#" class="hover:text-primary">Careers</a></li>
-        <li><a href="#" class="hover:text-primary">Contact Us</a></li>
-      </ul>
-    </div>
-    <a href="#" class="bg-primary text-black px-4 py-2 rounded hover:bg-blue-600 transition">Get in Touch</a>
-  </nav>
-
+  <!-- 1. NAVBAR -->
+    <header class="sticky top-0 z-50 bg-gray-900/50 backdrop-blur-md border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-8 text-white" alt="Logo">
+            </a>
+            <!-- Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#what-we-do" class="hover:text-blue-400 transition duration-300">What we do</a>
+                <a href="C:\Users\krishna chaitrika\OneDrive\Desktop\UK website\career page.html" class="hover:text-blue-400 transition duration-300">Careers</a>
+                <a href= "C:\Users\krishna chaitrika\OneDrive\Desktop\UK website\business page (2).html" class="hover:text-blue-400 transition duration-300">Business</a>
+                <a href="#about" class="hover:text-blue-400 transition duration-300">About Us</a>
+                <a href="#contact" class="hover:text-blue-400 transition duration-300">Contact Us</a>
+            </div>
+            <!-- Mobile Menu Button (Optional, for completeness) -->
+            <button class="md:hidden text-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
   <!-- Hero Section -->
   <section class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-8 items-center">
     <div class="space-y-6">
@@ -157,37 +165,75 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-black border-t border-gray-800 text-gray-300">
-    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
-      <div>
-        <img src="https://www.technozis.com/static/images/brand-logo.svg" alt="Technozis Logo" class="h-8 mb-4">
-        <p class="text-sm">Technozis delivers cutting‑edge technology solutions that empower businesses worldwide.</p>
-      </div>
-      <div>
-        <h4 class="text-white font-medium mb-3">Expertise</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-primary">AI & Machine Learning</a></li>
-          <li><a href="#" class="hover:text-primary">Cloud Services</a></li>
-          <li><a href="#" class="hover:text-primary">Cybersecurity</a></li>
-          <li><a href="#" class="hover:text-primary">IoT Solutions</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-medium mb-3">Company</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-primary">About Us</a></li>
-          <li><a href="#" class="hover:text-primary">Careers</a></li>
-          <li><a href="#" class="hover:text-primary">Blog</a></li>
-          <li><a href="#" class="hover:text-primary">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-medium mb-3">Contact</h4>
-        <p class="text-sm mb-2">123 Innovation Way<br>San Francisco, CA 94107</p>
-        <p class="text-sm mb-2">Email: <a href="mailto:info@technozis.com" class="hover:text-primary">info@technozis.com</a></p>
-        <p class="text-sm">Phone: <a href="tel:+1234567890" class="hover:text-primary">+1 (234) 567‑890</a></p>
-        <div class="flex space-x-4 mt-4">
-          <a href="#" aria-label="LinkedIn"><svg class="w-5 h-5 fill-current text-white hover:text-primary" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.5c0-1.379-1.121-2.5-2.5-2.5s-2.5 1.121-2.5 2.5v5.5h-3v-10h3v1.354c.627-.967 1.79-1.354 2.938-1.354 2.21 0 4 1.79 4 4v6z"/></svg></a>
-          <a href="#" aria-label="Twitter"><svg class="w-5 h-5 fill-current text-white hover:text-primary" viewBox="0 0 24 24"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.916 4.916 0 0 0-8.384 4.482c-4.083-.205-7.702-2.162-10.124-5.138a4.822 4.822 0 0 0-.666 2.475c0 1.708.869 3.215 2.188 4.099a4.904 4.904 0 0 1-2.228-.616c-.054 1.981 1.388 3.842 3.444 4.254a4.935 4.935 0 0 1-2.224.084c.626 1.956 2.444 3.376 4.6 3.416a9.867 9.867 0 0 1-6.102 2.104c-.395 0-.787-.023-1.175-.069a13.945 13.945 0 0 0 7.548 2.212c9.058 0 14.009-7.496 14.009-13.986 0-.213-.005-.425-.014-.637a10.025 10.025 0 0 0 2.459-2.548l-.047-.02z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg class="w-5 h-5 fill-current text-white hover:text-primary" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.326v21.348c0 .733.592 1.326 1.325 1.326h11.494v-9.294h-3.129v-3.622h3.129v-2.672c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.716-1.796 1.767v2.318h3.587l-.467 3.622h-3.12v9.294h6.116c.733 0 1.325-.593 1.325-1.326v-21.348c0-.734-.592-1.326-
+      <!-- 6. FOOTER -->
+    <footer class="pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <!-- Top Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-10 border-b border-white/10 pb-12 mb-8">
+                
+                <!-- Column 1 (Logo & Social) -->
+                <div class="col-span-2 md:col-span-1">
+                    <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-9 mb-4" alt="Logo">
+                    <p class="text-sm text-gray-400 mb-6 max-w-xs">
+                        Leading the next generation of digital transformation with precision engineering and strategic consultancy.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Social Icons Placeholder -->
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 6.21c-.78.35-1.61.58-2.48.68.89-.53 1.57-1.37 1.89-2.39-.83.5-1.75.86-2.72 1.06-.78-.83-1.89-1.34-3.11-1.34-2.34 0-4.24 1.9-4.24 4.24 0 .33.04.65.11.96-3.5-.18-6.6-1.85-8.68-4.4-.36.62-.57 1.34-.57 2.1 0 1.46.74 2.75 1.87 3.5-.69-.02-1.34-.21-1.91-.53v.05c0 2.04 1.45 3.74 3.37 4.13-.35.09-.72.14-1.1.14-.27 0-.53-.03-.78-.07.54 1.69 2.11 2.93 3.97 2.97-1.45 1.14-3.28 1.82-5.27 1.82-.34 0-.68-.02-1.01-.06 1.87 1.2 4.09 1.93 6.5 1.93 7.79 0 12.05-6.45 12.05-12.05 0-.18-.01-.36-.02-.54.83-.6 1.56-1.35 2.14-2.19z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.16 6.18c-1.1.48-2.27.8-3.48.87a4.33 4.33 0 001.94-2.44 4.32 4.32 0 01-1.72.66c-.49-.52-1.19-1.13-1.91-1.36a4.32 4.32 0 00-2.05-.57c-2.61 0-4.72 2.11-4.72 4.71 0 .37.04.72.11 1.06C8.01 8.15 4.94 6.53 2.88 3.98a4.66 4.66 0 00.64 6.02c-.72-.22-1.39-.56-2-1.07 0 .05.01.1.02.15a4.7 4.7 0 003.87 4.62c-.41.11-.84.17-1.28.17-.31 0-.61-.03-.9-.08.62 1.94 2.41 3.36 4.54 3.4a7.62 7.62 0 01-4.75 1.63c-.31 0-.62-.02-.92-.05a10.73 10.73 0 005.83 1.71c6.99 0 10.83-5.79 10.83-10.83 0-.16-.01-.33-.01-.49.75-.54 1.41-1.21 1.93-1.97z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.2 6.37h-1.32v.88c0 .85-.27 1.51-.79 1.97-.52.46-1.26.73-2.2.73h-2.22v7.25h-1.32v-7.25h-2.22v-1.1h2.22V8.5c0-1.32.47-2.14 1.4-2.47.56-.19 1.18-.32 1.85-.32h2.22v1.29zm-5.61 12.77c.68 0 1.24-.1 1.67-.31.43-.21.77-.53 1.01-.94.24-.41.36-.89.36-1.44v-1.52h-3.3v1.52c0 .36.09.69.27.98.18.29.45.51.82.66z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Our Expertise -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Our Expertise</h4>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Cloud Solutions</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Software Development</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">DevOps Automation</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Data Engineering</a>
+                </div>
+
+                <!-- Column 3: Business -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Business</h4>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Client Success Stories</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Pricing & Tiers</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Partnerships</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Service Level Agreement</a>
+                </div>
+
+                <!-- Column 4: Employees -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Employees</h4>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Careers Portal</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Team Culture</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Benefits</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Employee Login</a>
+                </div>
+
+                <!-- Column 5: Company -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Company</h4>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Our Mission</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Press & Media</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Terms of Service</a>
+                    <a href="#" class="block text-sm text-gray-400 hover:text-blue-400 transition">Privacy Policy</a>
+                </div>
+            </div>
+
+            <!-- Bottom Contact Info -->
+            <div class="text-center md:text-left text-sm text-gray-500 space-y-1">
+                <p>
+                    <span class="font-medium text-gray-300 mr-4">Address:</span> 100 Corporate Drive, Suite 500, Tech City, CA 90210
+                </p>
+                <p>
+                    <span class="font-medium text-gray-300 mr-4">Email:</span> <a href="mailto:contact@technozis.com" class="hover:text-blue-400">contact@technozis.com</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
