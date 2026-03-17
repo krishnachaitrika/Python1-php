@@ -1,0 +1,241 @@
+career page prompt
+You are a senior frontend developer and UI designer. Generate a modern 
+**Technozis Careers webpage** using HTML and TailwindCSS.
+ The page must follow the **same design system as the Technozis website**, so that it looks like part of the same platform. 
+IMPORTANT RULES 
+• The company name must remain **Technozis** 
+• Background color must be **black (#000000)** 
+• Text colors must be **white and blue only** 
+• Do NOT use orange or other accent colors • Use **TailwindCSS CDN** 
+• Use **Inter font from Google Fonts** 
+• Design must look clean, modern, and professional HERO SECTION (IMPORTANT) The hero image must **NOT be used as a full background**. Instead create a **two-column hero layout**: Left side: • Large headline
+• Short description 
+• Blue call-to-action button Right side: 
+• Image displayed in a container 
+• Image should take 
+**around half the page width** 
+• Use rounded corners
+• Use spacing so the layout feels balanced Use this hero image: https://images.unsplash.com/photo-1521737604893-d14cc237f11d 
+NAVIGATION BAR Create a navbar with: Technozis logo on the left https://www.technozis.com/static/images/brand-logo.svg 
+Menu items: Solutions Services Industries About Us Careers Contact Us Add a blue **Get in Touch** button on the right. 
+SECTIONS Create the following sections: 
+1. Why Join Technozis (4 cards) 
+2. Life at Technozis (culture grid) 
+3. Who We Are Looking For (role cards with avatars) 
+4. Community section with image and text Use these images where needed.
+
+Community Image https://images.unsplash.com/photo-1556761175-b413da4baf72 
+Icons https://img.icons8.com/ios-filled/50/ffffff/globe.png https://img.icons8.com/ios-filled/50/ffffff/book.png https://img.icons8.com/ios-filled/50/ffffff/diamond.png https://img.icons8.com/ios-filled/50/ffffff/growth.png FOOTER (IMPORTANT)
+Create a **modern redesigned footer**. 
+The footer must contain: 
+• Technozis logo 
+• Short company description
+• Expertise links
+• Company links • Contact information 
+• Social links The footer must be styled with:
+• black background 
+• subtle border top 
+• multi-column layout 
+• clean spacing 
+The footer should look **more modern than a basic list footer**. 
+OUTPUT RULES 
+• Output ONLY the HTML code
+• Do NOT include explanations
+• Do NOT include markdown formatting 
+• Do NOT write messages like “Here is the HTML code” 
+• Start directly with:
+
+
+Business Page Prompt
+
+You are a senior frontend developer and elite UI/UX designer.
+
+Your task is to recreate a Technozis-style Business webpage using the EXACT structure and layout provided, but with a PREMIUM modern SaaS design.
+
+--------------------------------------------------
+
+GLOBAL DESIGN SYSTEM (VERY IMPORTANT):
+
+- Use ONE consistent background across entire page:
+  → bg-gradient-to-b from-[#0B1120] to-[#000000]
+
+- DO NOT use different background colors for sections
+- All sections must feel seamless and connected
+
+--------------------------------------------------
+
+ADVANCED VISUAL ENHANCEMENT (MAKE IT PREMIUM):
+
+Use subtle glow gradients across the page:
+
+1. HERO SECTION GLOW:
+   → bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.15),transparent)]
+
+2. SECTION DIVIDERS:
+   → Add soft gradient overlays between sections:
+   bg-gradient-to-b from-transparent via-white/5 to-transparent
+
+3. CARD HOVER GLOW:
+   → hover:shadow-[0_0_25px_rgba(59,130,246,0.3)]
+
+4. BUTTON GLOW:
+   → hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]
+
+IMPORTANT:
+- Keep effects subtle (premium feel, not flashy)
+- Maintain readability at all times
+
+--------------------------------------------------
+
+LOGO (USE THIS EXACTLY):
+
+https://www.technozis.com/static/images/brand-logo.svg
+
+--------------------------------------------------
+
+IMAGES (USE THESE — NOT ORIGINAL SITE IMAGES):
+
+Hero:
+https://images.unsplash.com/photo-1600880292203-757bb62b4baf
+
+Team:
+https://images.unsplash.com/photo-1552664730-d307ca884978
+
+Professional Woman:
+https://images.unsplash.com/photo-1573496359142-b8d87734a5a2
+
+IT Team:
+https://images.unsplash.com/photo-1553877522-43269d4ea984
+
+--------------------------------------------------
+
+PAGE STRUCTURE (STRICT — FOLLOW EXACTLY):
+
+1. NAVBAR
+- Sticky top
+- Dark transparent background with blur (backdrop-blur-md)
+- Logo left
+- Menu right:
+  → What we do
+  → Careers
+  → Business
+  → About Us
+  → Contact Us
+
+--------------------------------------------------
+
+2. HERO SECTION (NO SEPARATE BACKGROUND)
+
+- Same page background
+- Add radial glow behind content
+
+LEFT:
+- Label: Professional Services
+- Large heading (3 lines)
+- 2 paragraphs
+- CTA button
+
+RIGHT:
+- Rounded image
+- Slight shadow
+
+--------------------------------------------------
+
+3. CORE OFFERINGS
+
+- Center heading
+- 3 cards in grid
+
+Cards:
+- bg-white/5 (glass effect)
+- backdrop-blur-md
+- rounded-2xl
+- border border-white/10
+
+Content:
+- Title
+- Description
+- Bullet points with check icons
+
+--------------------------------------------------
+
+4. WHY CHOOSE OUR PROFESSIONAL SERVICES
+
+Layout:
+- Left image
+- Right content
+
+Content:
+- Heading
+- 5 bullet points (2 columns)
+
+--------------------------------------------------
+
+5. WHY CHOOSE US FOR MANAGED IT SERVICES
+
+Layout:
+- Left image
+- Right content
+
+--------------------------------------------------
+
+6. FOOTER
+
+LEFT:
+- Logo
+- Description
+- Social icons
+
+RIGHT (4 columns):
+- Our Expertise
+- Business
+- Employees
+- Company
+
+BOTTOM:
+- Address
+- Email
+
+--------------------------------------------------
+
+TYPOGRAPHY:
+
+- Headings: text-4xl md:text-6xl font-bold
+- Text: text-gray-400
+- Accent text: text-blue-400
+
+--------------------------------------------------
+
+SPACING & LAYOUT:
+
+- max-w-7xl mx-auto
+- px-6 md:px-12
+- py-20 sections
+
+--------------------------------------------------
+
+INTERACTIONS:
+
+- Smooth hover animations
+- scale-105 on hover
+- transition duration-300
+
+--------------------------------------------------
+
+SUCCESS CRITERIA:
+
+- Entire page feels like ONE continuous surface
+- No harsh color breaks
+- Clean, premium SaaS design
+- Visually close to reference screenshots
+- Modern and professional
+
+--------------------------------------------------
+
+OUTPUT FORMAT:
+
+Return ONLY:
+- Full HTML file
+- Tailwind CDN included
+- No explanations
+- No markdown
