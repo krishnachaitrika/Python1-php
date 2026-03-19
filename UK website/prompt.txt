@@ -8,7 +8,8 @@ IMPORTANT RULES
 • Text colors must be **white and blue only** 
 • Do NOT use orange or other accent colors • Use **TailwindCSS CDN** 
 • Use **Inter font from Google Fonts** 
-• Design must look clean, modern, and professional HERO SECTION (IMPORTANT) The hero image must **NOT be used as a full background**. Instead create a **two-column hero layout**: Left side: • Large headline
+• Design must look clean, modern, and professional HERO SECTION (IMPORTANT) The hero image must **NOT be used as a full background**. Instead create a **two-column hero layout**: Left side: 
+• Large headline
 • Short description 
 • Blue call-to-action button Right side: 
 • Image displayed in a container 
@@ -31,7 +32,8 @@ The footer must contain:
 • Technozis logo 
 • Short company description
 • Expertise links
-• Company links • Contact information 
+• Company links 
+• Contact information 
 • Social links The footer must be styled with:
 • black background 
 • subtle border top 

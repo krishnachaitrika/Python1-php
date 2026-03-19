@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozis — Business</title>
+    <link rel="icon" type="image/png" href="https://www.technozis.com/static/images/brand-logo-2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-global { background: linear-gradient(to bottom, #0B1120, #000000); }
+        .card-glow { transition: all 0.3s ease-in-out; }
+        .card-glow:hover { box-shadow: 0 0 25px rgba(59,130,246,0.3); transform: translateY(-5px); }
+        .btn-glow { transition: all 0.3s ease-in-out; }
+        .btn-glow:hover { box-shadow: 0 0 20px rgba(59,130,246,0.5); transform: scale(1.02); }
+        .divider-glow { background-image: linear-gradient(to bottom, transparent, rgba(255,255,255,0.05), transparent); }
+        .hero-glow { background: radial-gradient(circle at top, rgba(59,130,246,0.15), transparent); }
+        /* Carousel */
+        .carousel-track { display: flex; gap: 1.5rem; animation: scroll 35s linear infinite; width: max-content; }
+        .carousel-track:hover { animation-play-state: paused; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .carousel-wrapper { overflow: hidden; mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
+    </style>
+</head>
+<body class="bg-global text-white min-h-screen">
+
+    <!-- ═══════════════════════════════════════
+         1. NAVBAR
+    ═══════════════════════════════════════ -->
+    <header class="sticky top-0 z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <a href="https://www.technozis.com/" class="flex-shrink-0">
+                <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-8" alt="Technozis Logo">
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                 <a href="C:\Users\krishna chaitrika\OneDrive\Desktop\UK website\careers_page.html" class="text-blue-400 font-semibold">Careers</a>
+                <a href="C:\Users\krishna chaitrika\OneDrive\Desktop\UK website\business_page.html" class="hover:text-blue-400 transition duration-300">Business</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">About Us</a>
+                <a href="mailto:careers@technozis.com" class="hover:text-blue-400 transition duration-300">Contact Us</a>
+            </div>
+                    <!-- Mobile hamburger -->
+            <button id="hamburger" class="md:hidden text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/90 border-t border-white/10 px-6 py-4 space-y-3 text-sm font-medium text-gray-300">
+            <a href="https://www.technozis.com/" class="block hover:text-blue-400 transition">What we do</a>
+            <a href="https://www.technozis.com/careers" class="block hover:text-blue-400 transition">Careers</a>
+            <a href="#" class="block text-blue-400 font-semibold">Business</a>
+            <a href="https://www.technozis.com/" class="block hover:text-blue-400 transition">About Us</a>
+            <a href="mailto:careers@technozis.com" class="block hover:text-blue-400 transition">Contact Us</a>
+            <a href="mailto:careers@technozis.com" class="inline-block mt-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full btn-glow">Get Started</a>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             2. HERO SECTION
+        ═══════════════════════════════════════ -->
+        <section class="pt-24 pb-32 relative overflow-hidden hero-glow">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- LEFT CONTENT -->
+                    <div>
+                        <span class="inline-block border border-blue-500/40 text-blue-400 text-xs px-3 py-1 rounded-full mb-6 uppercase tracking-widest">Professional Services & Build Teams</span>
+                        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                            We Help Businesses<br/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Build, Deploy,</span><br/>
+                            and Operate.
+                        </h1>
+                        <p class="text-lg text-gray-400 mb-4 max-w-lg">
+                            Technozis empowers organizations to accelerate their digital transformation by providing expert-driven solutions tailored to evolving business needs.
+                        </p>
+                        <p class="text-lg text-gray-400 mb-10 max-w-lg">
+                            Our premium professional services are trusted by Fortune 500 companies worldwide, enabling them to seamlessly adapt, scale, and innovate without compromising on speed or quality.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#offerings" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-full btn-glow">Explore Services</a>
+                            <a href="mailto:careers@technozis.com" class="border border-white/20 hover:border-blue-400 hover:text-blue-400 text-white font-semibold px-8 py-4 rounded-full transition duration-300">Talk to an Expert</a>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT IMAGE -->
+                    <div class="order-first lg:order-last">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf"
+                             alt="Professional Services Team"
+                             class="w-full h-[480px] object-cover rounded-[2rem] shadow-2xl shadow-blue-900/50 border border-blue-500/20 transform hover:scale-[1.01] transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <!-- ═══════════════════════════════════════
+             4. CERTIFICATIONS
+        ═══════════════════════════════════════ -->
+        <section class="py-14">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10 text-center md:text-left">
+                    <div class="max-w-md">
+                        <h3 class="text-2xl font-bold text-white mb-2">Officially Certified</h3>
+                        <p class="text-gray-400">We're officially certified by <span class="text-white font-semibold">Great Place to Work®</span> and <span class="text-white font-semibold">D-U-N-S®</span>, reflecting our credibility and positive workplace culture.</p>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <img src="https://www.technozis.com/static/images/gptw-cert.png" alt="Great Place to Work Certificate" class="h-20 w-auto object-contain">
+                        <img src="https://www.technozis.com/static/images/duns.png" alt="D-U-N-S Certificate" class="h-20 w-auto object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <!-- ═══════════════════════════════════════
+             5. THREE CORE BUSINESS OFFERINGS
+        ═══════════════════════════════════════ -->
+        <section id="offerings" class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="text-center mb-16">
+                    <span class="inline-block border border-blue-500/40 text-blue-400 text-xs px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Business</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Three Core Service Lines</h2>
+                    <p class="text-xl text-gray-400 max-w-3xl mx-auto">Technozis delivers across three interconnected service pillars, helping you run a marathon or do a sprint.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Card 1: Professional Services & Build Teams -->
+                    <div class="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md card-glow flex flex-col">
+                        <div class="mb-6">
+                            <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Professional Services & Build Teams</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">Technozis specializes in delivering expert-led professional services and high-performance build teams across ServiceNow, data engineering, Salesforce, cloud, and full-stack development.</p>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Staff augmentation & team extension</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> End-to-end project delivery</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> ServiceNow implementation & optimization</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Salesforce & CRM modernization</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Data engineering & analytics</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Cloud & infrastructure engineering</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Managed IT Services -->
+                    <div class="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md card-glow flex flex-col">
+                        <div class="mb-6">
+                            <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Managed IT Services</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">We take ownership of your technology operations so you can focus on your core business. Our managed services keep your systems healthy, secure, and continuously optimized.</p>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> 24/7 infrastructure monitoring & support</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Incident, problem & change management</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Platform administration & governance</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Security operations & compliance</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> SLA-driven service delivery</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Proactive performance optimization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Develop & Operate -->
+                    <div class="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md card-glow flex flex-col">
+                        <div class="mb-6">
+                            <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 4L2 8l4 4"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">Develop & Operate</h3>
+                        <p class="text-gray-400 mb-6 flex-grow">From building robust enterprise systems to operating them at scale — Technozis bridges the gap between development velocity and operational reliability.</p>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> DevOps & CI/CD pipeline automation</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Cloud-native application development</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Platform engineering & SRE</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Release management & deployment</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Observability & performance tuning</li>
+                            <li class="flex items-center"><span class="text-blue-400 mr-2">✓</span> Agile & ITIL-aligned delivery</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <!-- ═══════════════════════════════════════
+             6. BUILD & DEPLOY — PROFESSIONAL SERVICES DETAIL
+        ═══════════════════════════════════════ -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- LEFT IMAGE -->
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+                             alt="High Performance Engineering Teams"
+                             class="w-full h-[480px] object-cover rounded-3xl shadow-xl border border-blue-500/10 transform hover:scale-[1.01] transition duration-500">
+                    </div>
+
+                    <!-- RIGHT CONTENT -->
+                    <div>
+                        <span class="inline-block border border-blue-500/40 text-blue-400 text-xs px-3 py-1 rounded-full mb-6 uppercase tracking-widest">Professional Services</span>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Build & Deploy with our High Performance Engineering Teams</h2>
+                        <p class="text-lg text-gray-400 mb-10">
+                            As a trusted service provider, Technozis is a leading player offering specialized tech practices across 100+ domains — from ServiceNow and data engineering to full-stack development — helping businesses solve complex implementation and delivery challenges with agility and precision.
+                        </p>
+
+                        <!-- Process steps -->
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-5">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 font-bold text-sm">01</div>
+                                <div>
+                                    <h4 class="text-white font-semibold text-lg mb-1">Meet with an Expert</h4>
+                                    <p class="text-gray-400 text-sm">Discuss your IT goals, challenges, and needs. We'll provide tailored recommendations for your situation.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-5">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 font-bold text-sm">02</div>
+                                <div>
+                                    <h4 class="text-white font-semibold text-lg mb-1">Scoping</h4>
+                                    <p class="text-gray-400 text-sm">We assess requirements and define the engagement scope, team structure, and delivery timelines.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-5">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 font-bold text-sm">03</div>
+                                <div>
+                                    <h4 class="text-white font-semibold text-lg mb-1">Kickstart</h4>
+                                    <p class="text-gray-400 text-sm">Your dedicated team is onboarded and delivery begins with full transparency and governance.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="mailto:careers@technozis.com" class="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full btn-glow">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <!-- ═══════════════════════════════════════
+             7. MANAGED IT SERVICES DETAIL
+        ═══════════════════════════════════════ -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- LEFT CONTENT -->
+                    <div>
+                        <span class="inline-block border border-blue-500/40 text-blue-400 text-xs px-3 py-1 rounded-full mb-6 uppercase tracking-widest">Managed IT Services</span>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Simplify Operations. Focus on What Matters.</h2>
+                        <p class="text-lg text-gray-400 mb-10">
+                            Technozis manages your IT infrastructure end-to-end so your teams can stay focused on innovation and business growth. With certified experts and proven processes, we ensure your systems are always on, always secure, always optimized.
+                        </p>
+                        <ul class="space-y-5">
+                            <li class="flex items-start gap-4">
+                                <svg class="w-6 h-6 mt-0.5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <div>
+                                    <span class="text-white font-semibold">Proactive Monitoring</span>
+                                    <p class="text-gray-400 text-sm mt-0.5">Round-the-clock visibility into your infrastructure health.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-6 h-6 mt-0.5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <div>
+                                    <span class="text-white font-semibold">Incident Management</span>
+                                    <p class="text-gray-400 text-sm mt-0.5">Fast resolution with ITIL-aligned processes and clear SLAs.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-6 h-6 mt-0.5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <div>
+                                    <span class="text-white font-semibold">Security & Compliance</span>
+                                    <p class="text-gray-400 text-sm mt-0.5">Continuous security posture management and audit readiness.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <svg class="w-6 h-6 mt-0.5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                <div>
+                                    <span class="text-white font-semibold">Platform Governance</span>
+                                    <p class="text-gray-400 text-sm mt-0.5">Structured oversight of your enterprise platforms and tools.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="mailto:careers@technozis.com" class="mt-8 inline-block border border-blue-500 text-blue-400 font-semibold px-8 py-3 rounded-full hover:bg-blue-500/10 btn-glow">Learn More</a>
+                    </div>
+
+                    <!-- RIGHT IMAGE -->
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984"
+                             alt="Managed IT Services"
+                             class="w-full h-[480px] object-cover rounded-3xl shadow-xl border border-blue-500/10 transform hover:scale-[1.01] transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <!-- ═══════════════════════════════════════
+             8. DEVELOP & OPERATE DETAIL
+        ═══════════════════════════════════════ -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- LEFT IMAGE -->
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2"
+                             alt="Develop and Operate"
+                             class="w-full h-[480px] object-cover rounded-3xl shadow-xl border border-blue-500/10 transform hover:scale-[1.01] transition duration-500">
+                    </div>
+
+                    <!-- RIGHT CONTENT -->
+                    <div>
+                        <span class="inline-block border border-blue-500/40 text-blue-400 text-xs px-3 py-1 rounded-full mb-6 uppercase tracking-widest">Develop & Operate</span>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6">Bridge the Gap Between Vision and Reality</h2>
+                        <p class="text-lg text-gray-400 mb-10">
+                            At Technozis, we don't just connect people and ideas — we help them grow into real-world innovations. Whether you're building a product, scaling a team, or searching for the right opportunity, we're here to turn your vision into momentum.
+                        </p>
+
+                        <!-- Stats grid -->
+                        <div class="grid grid-cols-2 gap-4 mb-10">
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-blue-500/40 transition duration-300">
+                                <p class="text-3xl font-bold text-blue-400">10+</p>
+                                <p class="text-gray-400 text-sm mt-1">Industries innovated</p>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-blue-500/40 transition duration-300">
+                                <p class="text-3xl font-bold text-blue-400">50k+</p>
+                                <p class="text-gray-400 text-sm mt-1">Community members</p>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-blue-500/40 transition duration-300">
+                                <p class="text-3xl font-bold text-blue-400">100+</p>
+                                <p class="text-gray-400 text-sm mt-1">Tech domains covered</p>
+                            </div>
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-blue-500/40 transition duration-300">
+                                <p class="text-3xl font-bold text-blue-400">Fortune 500</p>
+                                <p class="text-gray-400 text-sm mt-1">Trusted clients</p>
+                            </div>
+                        </div>
+
+                        <a href="mailto:careers@technozis.com" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full btn-glow">Explore Our Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+
+        <!-- ═══════════════════════════════════════
+             10. SERVICENOW CTA BANNER
+        ═══════════════════════════════════════ -->
+        <section class="py-20 px-6 md:px-12">
+            <div class="max-w-7xl mx-auto bg-gradient-to-r from-blue-900/30 via-blue-800/20 to-blue-900/30 border border-blue-500/20 rounded-3xl p-12 md:p-16 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Empowering Enterprises with<br class="hidden md:inline"/> ServiceNow Excellence</h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-10">
+                    At Technozis, we specialize in delivering end-to-end ServiceNow solutions that streamline operations, drive digital transformation, and boost business efficiency. With a deep bench of certified ServiceNow professionals, we help organizations leverage the full power of the platform across ITSM, ITOM, HRSD, SecOps, and more.
+                </p>
+                <a href="mailto:careers@technozis.com" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-10 py-4 rounded-full btn-glow">Want to scale with us? Get Started →</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+    <!-- ═══════════════════════════════════════
+         11. FOOTER
+    ═══════════════════════════════════════ -->
+    <footer class="pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+
+            <!-- Top Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-10 border-b border-white/10 pb-12 mb-8">
+
+                <!-- Col 1: Logo & Socials -->
+                <div class="col-span-2 md:col-span-1">
+                    <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-9 mb-4" alt="Technozis Logo">
+                    <p class="text-sm text-gray-400 mb-6 max-w-xs">
+                        We help businesses build, deploy, and operate offering premium professional services on various tech stacks.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/technozis" target="_blank" class="text-gray-400 hover:text-blue-400 transition">
+                            <img src="https://www.technozis.com/static/images/linkedIn.svg" alt="LinkedIn" class="w-6 h-6">
+                        </a>
+                        <a href="https://www.instagram.com/technozis/" target="_blank" class="text-gray-400 hover:text-blue-400 transition">
+                            <img src="https://www.technozis.com/static/images/instagram.svg" alt="Instagram" class="w-6 h-6">
+                        </a>
+                        <a href="https://chat.whatsapp.com/Bu7OFoBvzV77wVNKyoiUjA" target="_blank" class="text-gray-400 hover:text-blue-400 transition">
+                            <img src="https://www.technozis.com/static/images/link-icon.svg" alt="Community" class="w-6 h-6">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Our Expertise -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Our Expertise</h4>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">ServiceNow</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Salesforce</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Data Analytics</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Open AI</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Oracle</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">SAP</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Cloud & Infra</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Mobility & Development</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Blockchain & Web3</a>
+                </div>
+
+                <!-- Col 3: Business -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Business</h4>
+                    <a href="#offerings" class="block text-sm text-gray-400 hover:text-blue-400 transition">Professional Services & Build Teams</a>
+                    <a href="#offerings" class="block text-sm text-gray-400 hover:text-blue-400 transition">Managed IT Services</a>
+                    <a href="#offerings" class="block text-sm text-gray-400 hover:text-blue-400 transition">Develop & Operate</a>
+                </div>
+
+                <!-- Col 4: Employees -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Employees</h4>
+                    <a href="https://www.technozis.com/careers" class="block text-sm text-gray-400 hover:text-blue-400 transition">Careers</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Community</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Culture</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Open Roles</a>
+                </div>
+
+                <!-- Col 5: Company -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Company</h4>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">About Us</a>
+                </div>
+            </div>
+
+            <!-- Bottom Contact Info -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-gray-500 mb-6">
+                <span>India | Dubai | Australia | USA</span>
+                <span>DCG2-0210, DLF Corporate Green, Sector 74A, Gurugram, Haryana, 122004</span>
+                <a href="mailto:careers@technozis.com" class="text-blue-400 hover:underline">careers@technozis.com</a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-white/10 pt-6 text-center text-xs text-gray-600">
+                Copyright © 2025 Technozis. | All Rights Reserved. |
+                <a href="https://www.technozis.com/" class="hover:text-blue-400 transition ml-1">Terms &amp; Conditions</a> |
+                <a href="https://www.technozis.com/" class="hover:text-blue-400 transition ml-1">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

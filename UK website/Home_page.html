@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozis</title>
+
+<link rel="icon" type="image/png" href="https://www.technozis.com/static/images/brand-logo-2.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .text-blue-accent {
+            color: #3B82F6; /* A common blue shade */
+        }
+        .bg-blue-accent {
+            background-color: #3B82F6;
+        }
+
+        /* ── Platform Impact Carousel ── */
+        .carousel-wrapper {
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+        }
+        .carousel-track {
+            display: flex;
+            gap: 1.5rem;
+            width: max-content;
+            animation: carouselScroll 35s linear infinite;
+        }
+        .carousel-track:hover { animation-play-state: paused; }
+        @keyframes carouselScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ── Platform Logo Slider ── */
+        .logo-slider-wrapper {
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+        }
+        .logo-slider-track {
+            display: flex;
+            align-items: center;
+            gap: 3.5rem;
+            width: max-content;
+            animation: logoScroll 22s linear infinite;
+        }
+        .logo-slider-track:hover { animation-play-state: paused; }
+        @keyframes logoScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased">
+    <!-- 1. NAVBAR -->
+    <header class="sticky top-0 z-50 bg-gray-900/50 backdrop-blur-md border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-8 text-white" alt="Logo">
+            </a>
+            <!-- Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+		<div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="C:\Users\krishna chaitrika\OneDrive\Desktop\UK website\careers_page.html" class="text-blue-400 font-semibold">Careers</a>
+                <a href="C:\Users\krishna chaitrika\OneDrive\Desktop\UK website\business_page.html" class="hover:text-blue-400 transition duration-300">Business</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">About Us</a>
+                <a href="mailto:careers@technozis.com" class="hover:text-blue-400 transition duration-300">Contact Us</a>
+            </div>
+         </nav>
+</header>
+
+                           <!-- Mobile Menu Button (Optional, for completeness) -->
+            <button class="md:hidden text-gray-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>    
+
+<main>
+        <!-- 2. Hero section -->
+        <section class="relative py-20 md:py-32 overflow-hidden bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                        Your <span class="text-blue-accent">Strategic Partner</span> for Enterprise Digital Transformation
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0 animate-fade-in-up delay-100">
+                        Technozis partners with large organizations globally. We help enterprises implement and optimize ServiceNow and other enterprise platforms to streamline workflows, improve IT operations, and deliver measurable business outcomes.                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up delay-200">
+                    </div>
+                </div>
+                <div class="relative flex justify-center lg:justify-end animate-fade-in-right delay-300">
+                    <img src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg" alt="Hero Image: Global technology team collaboration" class="rounded-2xl shadow-xl w-full max-w-lg lg:max-w-none h-auto object-cover object-center transform hover:scale-102 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-2xl"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2b. Certifications section -->
+        <section class="py-10 bg-gray-950 border-y border-white/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+                <p class="text-gray-300 text-lg font-medium">We're officially certified by</p>
+                <div class="flex flex-wrap justify-center gap-8 items-center">
+                    <img src="https://www.technozis.com/static/images/gptw-cert.png" alt="Great Place to Work Certificate" class="h-20 w-auto object-contain">
+                    <img src="https://www.technozis.com/static/images/duns.png" alt="D-U-N-S Certificate" class="h-20 w-auto object-contain">
+                </div>
+                <p class="text-gray-400 text-sm max-w-xs">Reflecting our credibility and positive workplace culture.</p>
+            </div>
+        </section>
+
+        <!-- 3. Technologies section — animated logo slider -->
+        <section class="py-16 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Empowering Enterprises with <span class="text-blue-accent">Strategic Platforms</span> and Cloud Ecosystems
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Trusted by Fortune 500 companies across every major enterprise platform.</p>
+            </div>
+            <div class="logo-slider-wrapper">
+                <div class="logo-slider-track">
+                    <!-- Set 1 -->
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/servicenow.svg" alt="ServiceNow" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/salesforce.svg" alt="Salesforce" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/powerbi.svg" alt="PowerBI" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/aws.svg" alt="AWS" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/oracle.svg" alt="Oracle" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/cib_sap.svg" alt="SAP" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/generativeai.svg" alt="Generative AI" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <!-- Set 2 — duplicate for seamless loop -->
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/servicenow.svg" alt="ServiceNow" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/salesforce.svg" alt="Salesforce" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/powerbi.svg" alt="PowerBI" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/aws.svg" alt="AWS" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/oracle.svg" alt="Oracle" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/cib_sap.svg" alt="SAP" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-xl flex items-center justify-center min-w-[120px] h-20 hover:bg-gray-700 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/services/generativeai.svg" alt="Generative AI" class="h-10 w-auto filter grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Community / ecosystem section -->
+        <section class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative flex justify-center lg:justify-start">
+                    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="Diverse team collaborating" class="rounded-2xl shadow-xl w-full max-w-lg h-auto object-cover object-center transform hover:scale-102 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-2xl"></div>
+                </div>
+                <div class="text-center lg:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                        A Trusted Global <span class="text-blue-accent">Partner Ecosystem</span> and Community
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Technozis builds robust partnerships and fosters a global community of experts dedicated to enterprise-grade digital transformation. Our collaborative approach ensures impactful and sustainable results for our clients.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-md border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300">
+                            <p class="text-4xl font-bold text-blue-accent mb-2">15+</p>
+                            <p class="text-gray-300 text-lg">Years of Enterprise Experience</p>
+                        </div>
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-md border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300">
+                            <p class="text-4xl font-bold text-blue-accent mb-2">500+</p>
+                            <p class="text-gray-300 text-lg">Successful Enterprise Projects</p>
+                        </div>
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-md border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300">
+                            <p class="text-4xl font-bold text-blue-accent mb-2">10+</p>
+                            <p class="text-gray-300 text-lg">Global Client Footprint</p>
+                        </div>
+                        <div class="bg-gray-900 p-6 rounded-xl shadow-md border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300">
+                            <p class="text-4xl font-bold text-blue-accent mb-2">100%</p>
+                            <p class="text-gray-300 text-lg">Consistent Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Services section -->
+        <section id="services" class="py-20 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Our <span class="text-blue-accent">Enterprise Capabilities</span>
+                </h2>
+                <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
+                    From strategic consulting to robust platform implementation and ongoing managed services, Technozis delivers comprehensive solutions designed to optimize your enterprise operations.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9.25 20.25M12 14V3m-4 9H2.75M16 12h5.25m-7 5.25L17.25 20.25M16 16h-4M8 16h4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">ServiceNow Implementation & Optimization</h3>
+                        <p class="text-gray-400">
+                            End-to-end ServiceNow solutions, from initial deployment and configuration to custom application development and platform optimization.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 4l-4 4 4 4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">IT Service Management (ITSM) Solutions</h3>
+                        <p class="text-gray-400">
+                            Streamline IT operations with advanced ITSM strategies, incident, problem, change, and request management on leading enterprise platforms.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0h6"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Enterprise Workflow Automation</h3>
+                        <p class="text-gray-400">
+                            Automate complex business processes across departments, improving efficiency, reducing manual effort, and ensuring compliance.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 20v-5.25m0-7.5c0-1.284.6-2.457 1.571-3.23"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Strategic Digital Transformation Consulting</h3>
+                        <p class="text-gray-400">
+                            Expert guidance to define your digital strategy, assess readiness, and navigate the journey to a more agile and efficient enterprise.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Managed Services for Enterprise Platforms</h3>
+                        <p class="text-gray-400">
+                            Continuous monitoring, support, and maintenance for your critical enterprise platforms, ensuring stability, performance, and security.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-102 transition-all duration-300 group">
+                        <div class="text-blue-accent mb-6 flex justify-center">
+                            <svg class="w-12 h-12 group-hover:rotate-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 12c0 2.21.914 4.298 2.588 5.868a13.452 13.452 0 001.394 1.274C7.68 19.864 9.356 21 12 21c2.644 0 4.32-1.136 5.018-1.998a13.452 13.000 0 001.394-1.274C20.086 16.298 21 14.21 21 12a12.01 12.01 0 00-.382-7.016z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">IT Operations Management (ITOM)</h3>
+                        <p class="text-gray-400">
+                            Enhance IT operational visibility and control with solutions for event management, service mapping, and discovery, preventing outages and ensuring service health.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ═══════════════════════════════════════
+             9. PLATFORM IMPACT CAROUSEL
+        ═══════════════════════════════════════ -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 mb-12 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Explore Our Impact Across Platforms</h2>
+            </div>
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
+                    <!-- Set 1 -->
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-1.svg" alt="ServiceNow" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">ServiceNow</span>
+                        <h4 class="text-white font-semibold">Transforming ITSM with ServiceNow</h4>
+                    </div>
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-2.svg" alt="Salesforce" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">Salesforce</span>
+                        <h4 class="text-white font-semibold">CRM Modernization with Salesforce</h4>
+                    </div>
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-3.svg" alt="AWS" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">AWS</span>
+                        <h4 class="text-white font-semibold">Scaling Cloud Infrastructure on AWS</h4>
+                    </div>
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-4.svg" alt="Oracle" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">Oracle</span>
+                        <h4 class="text-white font-semibold">Oracle ERP Transformation</h4>
+                    </div>
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-5.svg" alt="Microsoft" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">Microsoft</span>
+                        <h4 class="text-white font-semibold">Modern Workplace with Microsoft 365</h4>
+                    </div>
+                    <!-- Set 2 (duplicate for seamless loop) -->
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-1.svg" alt="ServiceNow" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">ServiceNow</span>
+                        <h4 class="text-white font-semibold">Transforming ITSM with ServiceNow</h4>
+                    </div>
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-2.svg" alt="Salesforce" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">Salesforce</span>
+                        <h4 class="text-white font-semibold">CRM Modernization with Salesforce</h4>
+                    </div>
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-3.svg" alt="AWS" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">AWS</span>
+                        <h4 class="text-white font-semibold">Scaling Cloud Infrastructure on AWS</h4>
+                    </div>
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-4.svg" alt="Oracle" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">Oracle</span>
+                        <h4 class="text-white font-semibold">Oracle ERP Transformation</h4>
+                    </div>
+                    <div class="min-w-[280px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 hover:border-blue-500/40 transition duration-300">
+                        <img src="https://www.technozis.com/static/images/landing-carousel-5.svg" alt="Microsoft" class="w-full h-40 object-contain">
+                        <span class="text-blue-400 text-xs uppercase tracking-widest">Microsoft</span>
+                        <h4 class="text-white font-semibold">Modern Workplace with Microsoft 365</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <!-- 6. Why choose Technozis section -->
+        <section class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Why Partner with <span class="text-blue-accent">Technozis for Enterprise Success?</span>
+                </h2>
+                <p class="text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
+                    We combine deep domain expertise with a proven delivery model to ensure your enterprise achieves its strategic digital objectives.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:translate-y-[-5px] transition-all duration-300 group">
+                        <div class="text-blue-accent mb-4 flex justify-center">
+                            <svg class="w-10 h-10 group-hover:rotate-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Domain Expertise</h3>
+                        <p class="text-gray-400 text-sm">
+                            Specialized knowledge in ServiceNow, ITSM, and enterprise workflow automation for impactful solutions.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:translate-y-[-5px] transition-all duration-300 group">
+                        <div class="text-blue-accent mb-4 flex justify-center">
+                            <svg class="w-10 h-10 group-hover:rotate-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 4V2m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8v-2m0 2a2 2 0 100-4m0 4a2 2 0 110-4m-6 8H4m0 0a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6H2m18 0h2"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Proven Delivery Model</h3>
+                        <p class="text-gray-400 text-sm">
+                            Reliable implementation frameworks and methodologies ensuring project success and timely delivery.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:translate-y-[-5px] transition-all duration-300 group">
+                        <div class="text-blue-accent mb-4 flex justify-center">
+                            <svg class="w-10 h-10 group-hover:rotate-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 003 12c0 2.21.914 4.298 2.588 5.868a13.452 13.452 0 001.394 1.274C7.68 19.864 9.356 21 12 21c2.644 0 4.32-1.136 5.018-1.998a13.452 13.000 0 001.394-1.274C20.086 16.298 21 14.21 21 12a12.01 12.01 0 00-.382-7.016z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Strategic Partnership</h3>
+                        <p class="text-gray-400 text-sm">
+                            Dedicated to long-term client success through collaborative engagement and tailored solutions.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:translate-y-[-5px] transition-all duration-300 group">
+                        <div class="text-blue-accent mb-4 flex justify-center">
+                            <svg class="w-10 h-10 group-hover:rotate-3 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V3m0 20v-5.25m0-7.5c0-1.284.6-2.457 1.571-3.23"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Measurable Business Outcomes</h3>
+                        <p class="text-gray-400 text-sm">
+                            Focusing on solutions that deliver tangible ROI, operational efficiency, and sustained value.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. High-performance engineering teams section -->
+        <section class="py-20 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Empowering Your Vision with <span class="text-blue-accent">Specialized Enterprise Engineering Teams</span>
+                </h2>
+                <p class="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+                    Access elite engineering talent deeply experienced in enterprise platforms, integrating seamlessly with your operations to bring specialized expertise and dedication to every transformation initiative.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 text-left">
+                        <h3 class="text-xl font-semibold text-white mb-3">Agile & ITIL Methodologies</h3>
+                        <p class="text-gray-400 text-sm">
+                            Expert teams adopting Agile and ITIL frameworks for efficient, phased delivery.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 text-left">
+                        <h3 class="text-xl font-semibold text-white mb-3">Scalable Platform Resources</h3>
+                        <p class="text-gray-400 text-sm">
+                            Adjust resources dynamically to match the evolving needs of your enterprise projects.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 text-left">
+                        <h3 class="text-xl font-semibold text-white mb-3">Dedicated Platform Experts</h3>
+                        <p class="text-gray-400 text-sm">
+                            Engineers with deep platform knowledge, fully committed to your enterprise's strategic goals.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-lg border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-5px] transition-all duration-300 text-left">
+                        <h3 class="text-xl font-semibold text-white mb-3">Seamless IT Integration</h3>
+                        <p class="text-gray-400 text-sm">
+                            Teams quickly integrate with your existing IT landscape and operational practices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Expert consulting section -->
+        <section class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                        Strategic Enterprise Consulting, <span class="text-blue-accent">Tailored for Your Success</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Navigate the complexities of enterprise digital transformation with Technozis' expert consulting services. We provide strategic guidance to optimize your ServiceNow and other platform investments, aligning technology with core business objectives.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start bg-gray-900 p-5 rounded-xl border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-3px] transition-all duration-300 group">
+                            <div class="flex-shrink-0 text-blue-accent text-3xl font-bold mr-4">01</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Discovery & Strategic Roadmap</h3>
+                                <p class="text-gray-400 text-sm">
+                                    Comprehensive assessment of your current enterprise landscape, identifying key opportunities and crafting a robust digital transformation roadmap.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 p-5 rounded-xl border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-3px] transition-all duration-300 group">
+                            <div class="flex-shrink-0 text-blue-accent text-3xl font-bold mr-4">02</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Platform Architecture & Design</h3>
+                                <p class="text-gray-400 text-sm">
+                                    Designing scalable and resilient enterprise platform architectures (e.g., ServiceNow) that align with your strategic and operational goals.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 p-5 rounded-xl border-l-4 border-blue-accent hover:shadow-xl transform hover:translate-y-[-3px] transition-all duration-300 group">
+                            <div class="flex-shrink-0 text-blue-accent text-3xl font-bold mr-4">03</div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">Implementation, Adoption & Optimization</h3>
+                                <p class="text-gray-400 text-sm">
+                                    Guiding the execution phase, ensuring seamless platform adoption, continuous optimization, and measurable value realization.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-center lg:justify-end">
+                    <img src="https://images.pexels.com/photos/7567434/pexels-photo-7567434.jpeg" alt="Consulting meeting" class="rounded-2xl shadow-xl w-full max-w-lg h-auto object-cover object-center transform hover:scale-102 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 rounded-2xl"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Achievements / statistics section -->
+        <section class="py-20 bg-gray-950">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">
+                    Our <span class="text-blue-accent">Enterprise Impact</span> in Numbers
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-105 transition-all duration-300">
+                        <p class="text-5xl font-extrabold text-blue-accent mb-3">98%</p>
+                        <p class="text-xl text-white font-semibold">Enterprise Client Retention</p>
+                        <p class="text-gray-400 text-sm mt-2">
+                            A testament to our enduring partnerships and the value we deliver across large organizations.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-105 transition-all duration-300">
+                        <p class="text-5xl font-extrabold text-blue-accent mb-3">250+</p>
+                        <p class="text-xl text-white font-semibold">ServiceNow & Platform Experts</p>
+                        <p class="text-gray-400 text-sm mt-2">
+                            A global team with deep certifications and extensive experience in enterprise technology.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-105 transition-all duration-300">
+                        <p class="text-5xl font-extrabold text-blue-accent mb-3">30%</p>
+                        <p class="text-xl text-white font-semibold">Operational Efficiency Gain</p>
+                        <p class="text-gray-400 text-sm mt-2">
+                            Delivering tangible business value through streamlined processes and optimized platform performance.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-lg border border-gray-800 hover:border-blue-accent transform hover:scale-105 transition-all duration-300">
+                        <p class="text-5xl font-extrabold text-blue-accent mb-3">1M+</p>
+                        <p class="text-xl text-white font-semibold">Enterprise Solution Engineering</p>
+                        <p class="text-gray-400 text-sm mt-2">
+                            Extensive experience in building, implementing, and maintaining robust enterprise-grade solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+       <!-- 6. FOOTER -->
+    <footer class="pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            
+            <!-- Top Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-10 border-b border-white/10 pb-12 mb-8">
+                
+                <!-- Column 1 (Logo & Social) -->
+                <div class="col-span-2 md:col-span-1">
+                    <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-9 mb-4" alt="Logo">
+                    <p class="text-sm text-gray-400 mb-6 max-w-xs">
+                        Leading enterprise digital transformation with precision engineering, ServiceNow expertise, and strategic consultancy.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- Social Icons Placeholder -->
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 6.21c-.78.35-1.61.58-2.48.68.89-.53 1.57-1.37 1.89-2.39-.83.5-1.75.86-2.72 1.06-.78-.83-1.89-1.34-3.11-1.34-2.34 0-4.24 1.9-4.24 4.24 0 .33.04.65.11.96-3.5-.18-6.6-1.85-8.68-4.4-.36.62-.57 1.34-.57 2.1 0 1.46.74 2.75 1.87 3.5-.69-.02-1.34-.21-1.91-.53v.05c0 2.04 1.45 3.74 3.37 4.13-.35.09-.72.14-1.1.14-.27 0-.53-.03-.78-.07.54 1.69 2.11 2.93 3.97 2.97-1.45 1.14-3.28 1.82-5.27 1.82-.34 0-.68-.02-1.01-.06 1.87 1.2 4.09 1.93 6.5 1.93 7.79 0 12.05-6.45 12.05-12.05 0-.18-.01-.36-.02-.54.83-.6 1.56-1.35 2.14-2.19z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.16 6.18c-1.1.48-2.27.8-3.48.87a4.33 4.33 0 001.94-2.44 4.32 4.32 0 01-1.72.66c-.49-.52-1.19-1.13-1.91-1.36a4.32 4.32 0 00-2.05-.57c-2.61 0-4.72 2.11-4.72 4.71 0 .37.04.72.11 1.06C8.01 8.15 4.94 6.53 2.88 3.98a4.66 4.66 0 00.64 6.02c-.72-.22-1.39-.56-2-1.07 0 .05.01.1.02.15a4.7 4.7 0 003.87 4.62c-.41.11-.84.17-1.28.17-.31 0-.61-.03-.9-.08.62 1.94 2.41 3.36 4.54 3.4a7.62 7.62 0 01-4.75 1.63c-.31 0-.62-.02-.92-.05a10.73 10.73 0 005.83 1.71c6.99 0 10.83-5.79 10.83-10.83 0-.16-.01-.33-.01-.49.75-.54 1.41-1.21 1.93-1.97z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.2 6.37h-1.32v.88c0 .85-.27 1.51-.79 1.97-.52.46-1.26.73-2.2.73h-2.22v7.25h-1.32v-7.25h-2.22v-1.1h2.22V8.5c0-1.32.47-2.14 1.4-2.47.56-.19 1.18-.32 1.85-.32h2.22v1.29zm-5.61 12.77c.68 0 1.24-.1 1.67-.31.43-.21.77-.53 1.01-.94.24-.41.36-.89.36-1.44v-1.52h-3.3v1.52c0 .36.09.69.27.98.18.29.45.51.82.66z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Our Expertise -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Our Expertise</h4>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">ServiceNow</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Salesforce</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Data Analytics</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Cloud & Infra</a>
+                </div>
+
+                <!-- Column 3: Business -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Business</h4>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Professional Services & Build Teams</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Managed IT Services</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Develop & Operate</a>
+                </div>
+
+                <!-- Column 4: Employees -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Employees</h4>
+                    <a href="https://www.technozis.com/careers" class="block text-sm text-gray-400 hover:text-blue-400 transition">Careers</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Community</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Culture</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Open Roles</a>
+                </div>
+
+                <!-- Column 5: Company -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold text-white mb-3">Company</h4>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">About Us</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Terms & Conditions</a>
+                    <a href="https://www.technozis.com/" class="block text-sm text-gray-400 hover:text-blue-400 transition">Privacy Policy</a>
+                </div>
+            </div>
+
+            <!-- Bottom Contact Info -->
+            <div class="text-center md:text-left text-sm text-gray-500 space-y-1">
+                <p>
+                    <span class="font-medium text-gray-300 mr-4">Address:</span> DCG2-0210, DLF Corporate Green, Sector 74A, Gurugram, Haryana, 122004
+                </p>
+                <p>
+                    <span class="font-medium text-gray-300 mr-4">Email:</span> <a href="mailto:careers@technozis.com" class="hover:text-blue-400">careers@technozis.com</a>
+                </p>            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-white/10 pt-6 mt-8 text-center text-xs text-gray-600">
+                Copyright © 2025 Technozis. | All Rights Reserved. |
+                <a href="https://www.technozis.com/" class="hover:text-blue-400 transition ml-1">Terms &amp; Conditions</a> |
+                <a href="https://www.technozis.com/" class="hover:text-blue-400 transition ml-1">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

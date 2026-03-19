@@ -1,0 +1,391 @@
+{
+  "name": "wedsite",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        256
+      ],
+      "id": "d816d626-1e87-4ac2-a67f-c837e7fd55fd",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a senior enterprise content strategist and HTML editor.\n\nYou will receive a FULL HTML webpage.\n\nYour job is to ANALYZE and IMPROVE the CONTENT so that it accurately reflects a real enterprise IT consulting company like Technozis.\n\n--------------------------------------------------\n\nSTRICT RULES (DO NOT BREAK):\n\n1. DO NOT change ANY HTML structure\n   - Do NOT modify tags\n   - Do NOT remove sections\n   - Do NOT change class names or layout\n\n2. ONLY edit TEXT CONTENT inside tags\n\n3. Keep the SAME length and structure of content\n   - Do NOT shorten sections\n   - Do NOT add new sections\n\n--------------------------------------------------\n\nCONTENT CORRECTION RULES:\n\n1. Replace GENERIC phrases like:\n   - \"innovative solutions\"\n   - \"cutting-edge technology\"\n   - \"dynamic team\"\n\n   → With REALISTIC enterprise wording\n\n2. Align content with REAL IT services such as:\n   - ServiceNow solutions\n   - ITSM / ITOM\n   - Workflow automation\n   - Cloud & data engineering\n   - Enterprise consulting\n\n3. REMOVE fake or placeholder data:\n   - Fake addresses\n   - Fake phone numbers\n   - Unrealistic claims\n\n   → Replace with neutral/professional placeholders OR remove safely\n\n4. Job roles:\n   - Keep roles realistic and enterprise-focused\n   - Avoid random generic roles\n   - Example:\n     - ServiceNow Developer\n     - Cloud Engineer\n     - Data Engineer\n     - IT Consultant\n\n5. Tone:\n   - Professional\n   - Enterprise-level\n   - Clear and specific (NOT vague)\n\n6. DO NOT:\n   - Add buzzwords\n   - Add fake statistics\n   - Change meaning drastically\n\n--------------------------------------------------\n\nOUTPUT RULES:\n\n- Return ONLY the FULL updated HTML\n- Do NOT include explanations\n- Do NOT include markdown (no ```html)\n- Do NOT add extra text\n\n---------------------------------------------Make the content more realistic and less generic.\n\n- Reduce repetitive enterprise buzzwords\n- Make sentences more natural and specific\n- Add slight realism (mention real use cases like IT operations, incident management, cloud migration)\n- Avoid overly perfect marketing tone\n\nKeep:\n- Same HTML\n- Same structure\n- Same meaning\n\nReturn ONLY HTML.\n\nHere is the HTML:\n\n{{$json[\"html\"]}}",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        944,
+        80
+      ],
+      "id": "b9d6b356-9fda-411f-b4cf-e19b185a123f",
+      "name": "Basic LLM Chain1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.firecrawl.dev/v1/scrape",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"url\": \"https://technozis.com\",\n  \"formats\": [\"markdown\", \"html\"],\n  \"includeTags\": [\"img\", \"video\", \"source\", \"iframe\"],\n  \"onlyMainContent\": false\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        208,
+        256
+      ],
+      "id": "27f8b8ac-d092-4083-b5ab-f930edcb209e",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "pHzHn6RRsXsWOTBx",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "\nYou are a senior frontend developer and UI designer. Generate a modern \n**Technozis Careers webpage** using HTML and TailwindCSS.\n The page must follow the **same design system as the Technozis website**, so that it looks like part of the same platform. \nIMPORTANT RULES \n• The company name must remain **Technozis** \n• Background color must be **black (#000000)** \n• Text colors must be **white and blue only** \n• Do NOT use orange or other accent colors • Use **TailwindCSS CDN** \n• Use **Inter font from Google Fonts** \n• Design must look clean, modern, and professional HERO SECTION (IMPORTANT) The hero image must **NOT be used as a full background**. Instead create a **two-column hero layout**: Left side: \n• Large headline\n• Short description \n• Blue call-to-action button Right side: \n• Image displayed in a container \n• Image should take \n**around half the page width** \n• Use rounded corners\n• Use spacing so the layout feels balanced Use this hero image: https://images.unsplash.com/photo-1521737604893-d14cc237f11d \nNAVIGATION BAR Create a navbar with: Technozis logo on the left https://www.technozis.com/static/images/brand-logo.svg \nMenu items: Solutions Services Industries About Us Careers Contact Us Add a blue **Get in Touch** button on the right. \nSECTIONS Create the following sections: \n1. Why Join Technozis (4 cards) \n2. Life at Technozis (culture grid) \n3. Who We Are Looking For (role cards with avatars) \n4. Community section with image and text Use these images where needed.\n\nCommunity Image https://images.unsplash.com/photo-1556761175-b413da4baf72 \nIcons https://img.icons8.com/ios-filled/50/ffffff/globe.png https://img.icons8.com/ios-filled/50/ffffff/book.png https://img.icons8.com/ios-filled/50/ffffff/diamond.png https://img.icons8.com/ios-filled/50/ffffff/growth.png FOOTER (IMPORTANT)\nCreate a **modern redesigned footer**. \nThe footer must contain: \n• Technozis logo \n• Short company description\n• Expertise links\n• Company links \n• Contact information \n• Social links The footer must be styled with:\n• black background \n• subtle border top \n• multi-column layout \n• clean spacing \nThe footer should look **more modern than a basic list footer**. \nIMPORTANT OUTPUT RULES:\n\n- Return ONLY valid HTML\n- DO NOT include ```html or ```\n- DO NOT include explanations\n- DO NOT add any extra text\n\nHere is the HTML:\n\n{{$json[\"content\"]}}\n",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        432,
+        80
+      ],
+      "id": "cf0bb87a-733e-4d0f-8c71-732e55cf651d",
+      "name": "Basic LLM Chain2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        432,
+        256
+      ],
+      "id": "b30cf4d0-0589-438f-95b4-99e2a2f01823",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "685wBbSCTuHC09Vi",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        944,
+        240
+      ],
+      "id": "a4dd4480-4f4f-426f-ae26-d8e4d7bc2d38",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "MzH9k7neOEoUyRv9",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "You are a senior frontend developer and elite UI/UX designer.\n\nYour task is to recreate a Technozis-style Business webpage using HTML + TailwindCSS.\n\nYou MUST follow the EXACT structure, layout, and hierarchy defined below.\nDo NOT change section order.\nDo NOT skip sections.\nDo NOT redesign layout.\n\n--------------------------------------------------\n\nCRITICAL RULES (VERY IMPORTANT):\n\n1. Output ONLY valid HTML\n2. Include Tailwind CDN\n3. DO NOT include explanations\n4. DO NOT use markdown\n5. Start directly with: <!DOCTYPE html>\n\n6. NAVBAR, HERO, and FOOTER must ALWAYS be present and complete\n7. Logo must ALWAYS be visible and correctly aligned left\n8. Navigation items must ALWAYS be aligned right\n9. Footer must ALWAYS have 4 columns + bottom section\n\n--------------------------------------------------\n\nGLOBAL DESIGN SYSTEM:\n\n- Entire page must use ONE background only:\n  bg-gradient-to-b from-[#0B1120] to-[#000000]\n\n- DO NOT use different section backgrounds\n- No white backgrounds\n- No color breaks\n\n--------------------------------------------------\n\nPREMIUM VISUAL ENHANCEMENTS:\n\nHERO GLOW:\nbg-[radial-gradient(circle_at_top,rgba(59,130,246,0.15),transparent)]\n\nSECTION DIVIDER:\nbg-gradient-to-b from-transparent via-white/5 to-transparent\n\nCARD HOVER:\nhover:shadow-[0_0_25px_rgba(59,130,246,0.3)]\n\nBUTTON HOVER:\nhover:shadow-[0_0_20px_rgba(59,130,246,0.5)]\n\nKeep all effects subtle and premium.\n\n--------------------------------------------------\n\nLOGO (USE EXACTLY):\n\nhttps://www.technozis.com/static/images/brand-logo.svg\n\n--------------------------------------------------\n\nIMAGES (USE ONLY THESE):\n\nHero:\nhttps://images.unsplash.com/photo-1600880292203-757bb62b4baf\n\nTeam:\nhttps://images.unsplash.com/photo-1552664730-d307ca884978\n\nProfessional Woman:\nhttps://images.unsplash.com/photo-1573496359142-b8d87734a5a2\n\nIT Team:\nhttps://images.unsplash.com/photo-1553877522-43269d4ea984\n\n--------------------------------------------------\n\nPAGE STRUCTURE (STRICT — DO NOT CHANGE):\n\n1. NAVBAR (MANDATORY)\n\n- Sticky top\n- backdrop-blur-md\n- bg-black/70\n- border-b border-white/10\n\nLEFT:\n- Logo image\n\nRIGHT (horizontal menu):\n- What we do\n- Careers\n- Business\n- About Us\n- Contact Us\n\n- Add CTA button: \"Get in Touch\"\n\n--------------------------------------------------\n\n2. HERO SECTION (MANDATORY)\n\n- Same background as page (NO separate color)\n- Add radial glow\n\nLEFT:\n- Small label: \"Professional Services\"\n- Large 3-line heading\n- 2 descriptive paragraphs\n- CTA button\n\nRIGHT:\n- Image\n- rounded-2xl\n- shadow-xl\n\n--------------------------------------------------\n\n3. CORE OFFERINGS\n\n- Center heading\n- 3 cards grid\n\nEach card MUST include:\n- bg-white/5\n- backdrop-blur-md\n- border border-white/10\n- rounded-2xl\n- padding\n\nContent:\n- Title\n- Description\n- 3 bullet points with check icons\n\n--------------------------------------------------\n\n4. WHY CHOOSE OUR PROFESSIONAL SERVICES\n\nLayout:\n- LEFT → image\n- RIGHT → text\n\nText:\n- Heading\n- 5 bullet points (2 columns)\n\n--------------------------------------------------\n\n5. WHY CHOOSE US FOR MANAGED IT SERVICES\n\nLayout:\n- LEFT → image\n- RIGHT → text\n\n--------------------------------------------------\n\n6. FOOTER (MANDATORY — STRICT STRUCTURE)\n\nTOP SECTION:\n\nLEFT:\n- Logo\n- Short company description\n- Social icons (3)\n\nRIGHT (4 COLUMNS):\n\nColumn 1:\n- Our Expertise\n\nColumn 2:\n- Business\n\nColumn 3:\n- Employees\n\nColumn 4:\n- Company\n\nBOTTOM SECTION:\n- Address (left)\n- Email (right)\n\n--------------------------------------------------\n\nTYPOGRAPHY:\n\n- Headings:\n  text-4xl md:text-6xl font-bold text-white\n\n- Paragraphs:\n  text-gray-400\n\n- Accent:\n  text-blue-400\n\n--------------------------------------------------\n\nSPACING:\n\n- max-w-7xl mx-auto\n- px-6 md:px-12\n- py-20\n\n--------------------------------------------------\n\nINTERACTIONS:\n\n- hover:scale-105\n- transition duration-300\n\n--------------------------------------------------\n\nSUCCESS CONDITIONS (VERY IMPORTANT):\n\n- Navbar MUST be properly aligned (logo left, menu right)\n- Footer MUST have correct 4-column layout\n- Page MUST feel continuous (no background breaks)\n- Layout MUST match structure exactly\n- Design MUST look premium SaaS (not basic)\n\n--------------------------------------------------\n\nRETURN ONLY FULL HTML",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        448,
+        384
+      ],
+      "id": "be6c121f-1829-4ddf-94e7-cb2f41f95d82",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-flash-lite-latest",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        448,
+        544
+      ],
+      "id": "bb3dc9f2-e794-4294-8235-a76ba89c61de",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "685wBbSCTuHC09Vi",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const html = $json[\"text\"] || \"\";\n\nreturn [\n  {\n    binary: {\n      data: {\n        data: Buffer.from(html, \"utf8\").toString(\"base64\"),\n        mimeType: \"text/html\",\n        fileName: \"technizis-report.html\"\n      }\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1232,
+        80
+      ],
+      "id": "cd18e110-48b4-4137-906f-455c67b17466",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $json[\"text\"] || \"\";\n\n// remove markdown\nlet cleaned = raw\n  .replace(/```html/g, \"\")\n  .replace(/```/g, \"\")\n  .trim();\n\n// extract html only\nconst match = cleaned.match(/<!DOCTYPE html>[\\s\\S]*/);\n\nreturn [\n  {\n    json: {\n      html: match ? match[0] : cleaned\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        752,
+        80
+      ],
+      "id": "6a7fc86a-c4af-44ef-9172-67613353c02c",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $json[\"text\"] || \"\";\n\n// remove markdown\nlet cleaned = raw\n  .replace(/```html/g, \"\")\n  .replace(/```/g, \"\")\n  .trim();\n\n// extract html only\nconst match = cleaned.match(/<!DOCTYPE html>[\\s\\S]*/);\n\nreturn [\n  {\n    json: {\n      html: match ? match[0] : cleaned\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        752,
+        384
+      ],
+      "id": "196711f9-5deb-4915-b697-6798350b6e24",
+      "name": "Code in JavaScript2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a senior enterprise content strategist and HTML editor.\n\nYou will receive a FULL HTML webpage.\n\nYour job is to ANALYZE and IMPROVE the CONTENT so that it accurately reflects a real enterprise IT consulting company like Technozis.\n\n--------------------------------------------------\n\nSTRICT RULES (DO NOT BREAK):\n\n1. DO NOT change ANY HTML structure\n   - Do NOT modify tags\n   - Do NOT remove sections\n   - Do NOT change class names or layout\n\n2. ONLY edit TEXT CONTENT inside tags\n\n3. Keep the SAME length and structure of content\n   - Do NOT shorten sections\n   - Do NOT add new sections\n\n--------------------------------------------------\n\nCONTENT CORRECTION RULES:\n\n1. Replace GENERIC phrases like:\n   - \"innovative solutions\"\n   - \"cutting-edge technology\"\n   - \"dynamic team\"\n\n   → With REALISTIC enterprise wording\n\n2. Align content with REAL IT services such as:\n   - ServiceNow solutions\n   - ITSM / ITOM\n   - Workflow automation\n   - Cloud & data engineering\n   - Enterprise consulting\n\n3. REMOVE fake or placeholder data:\n   - Fake addresses\n   - Fake phone numbers\n   - Unrealistic claims\n\n   → Replace with neutral/professional placeholders OR remove safely\n\n4. Job roles:\n   - Keep roles realistic and enterprise-focused\n   - Avoid random generic roles\n   - Example:\n     - ServiceNow Developer\n     - Cloud Engineer\n     - Data Engineer\n     - IT Consultant\n\n5. Tone:\n   - Professional\n   - Enterprise-level\n   - Clear and specific (NOT vague)\n\n6. DO NOT:\n   - Add buzzwords\n   - Add fake statistics\n   - Change meaning drastically\n\n--------------------------------------------------\n\nOUTPUT RULES:\n\n- Return ONLY the FULL updated HTML\n- Do NOT include explanations\n- Do NOT include markdown (no ```html)\n- Do NOT add extra text\n\n---------------------------------------------Make the content more realistic and less generic.\n\n- Reduce repetitive enterprise buzzwords\n- Make sentences more natural and specific\n- Add slight realism (mention real use cases like IT operations, incident management, cloud migration)\n- Avoid overly perfect marketing tone\n\nKeep:\n- Same HTML\n- Same structure\n- Same meaning\n\nReturn ONLY HTML.\n\nHere is the HTML:\n\n{{$json[\"html\"]}}",
+        "batching": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        960,
+        384
+      ],
+      "id": "d43b27ff-0cf1-4104-980f-be7d549bdcb1",
+      "name": "Basic LLM Chain3"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-oss-120b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        960,
+        544
+      ],
+      "id": "15d4ba68-4e6e-46d0-8fda-58594b23e600",
+      "name": "Groq Chat Model1",
+      "credentials": {
+        "groqApi": {
+          "id": "MzH9k7neOEoUyRv9",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const html = $json[\"text\"] || \"\";\n\nreturn [\n  {\n    binary: {\n      data: {\n        data: Buffer.from(html, \"utf8\").toString(\"base64\"),\n        mimeType: \"text/html\",\n        fileName: \"technizis-report.html\"\n      }\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1264,
+        384
+      ],
+      "id": "f78a51ae-421d-4b27-b329-a595b4669037",
+      "name": "Code in JavaScript3"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain1": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Basic LLM Chain2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain2": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        []
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript2": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain3": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "79750c16-ea7f-40c0-8b62-54eba44a2afa",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3f88a87f80be19c18841ad1103113801dfee770cad6e6afdec74a816c8a7bc07"
+  },
+  "id": "1ZSQMfDUhZIIshi0",
+  "tags": []
+}
