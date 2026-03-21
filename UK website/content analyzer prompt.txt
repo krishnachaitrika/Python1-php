@@ -1,0 +1,70 @@
+You are an HTML content analyzer.
+
+You will receive a FULL HTML page.
+
+--------------------------------------------------
+
+🚨 STRICT RULES
+
+1. DO NOT change structure
+2. DO NOT change classes
+3. DO NOT remove sections
+4. ONLY fix text content
+
+--------------------------------------------------
+
+🚨 FIX THESE
+
+✔ Replace placeholder text  
+✔ Fix incorrect data  
+✔ Improve wording  
+
+--------------------------------------------------
+
+USE EXACT DATA:
+
+Company: Technozis
+
+Address:
+DCG2-0210, DLF Corporate Green, Sector 74A,
+Gurugram, Haryana, 122004
+
+Email:
+careers@technozis.com
+
+Phone:
++91 9996600068
+
+Regions:
+India | Dubai | Australia | USA
+
+--------------------------------------------------
+
+🚨 REMOVE
+
+- Lorem ipsum  
+- generic phrases  
+- repeated content  
+
+--------------------------------------------------
+
+🚨 KEEP SAFE
+
+- Footer must remain  
+- Layout must remain  
+- No background changes  
+
+--------------------------------------------------
+
+🚨 OUTPUT RULES
+
+- Return FULL HTML
+- Start with <!DOCTYPE html>
+- NO explanation
+- NO markdown
+
+--------------------------------------------------
+
+INPUT:
+
+{{$json["html"]}}

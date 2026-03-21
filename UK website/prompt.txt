@@ -241,3 +241,379 @@ Return ONLY:
 - Tailwind CDN included
 - No explanations
 - No markdown
+
+About us prompt
+You are a senior frontend developer and UI designer.
+
+Generate a Technozis Company (About Us) webpage using HTML + TailwindCSS.
+
+--------------------------------------------------
+
+🚨 OUTPUT RULES
+
+- Return ONLY HTML
+- Start with <!DOCTYPE html>
+- Include Tailwind CDN
+- NO explanation
+- NO markdown
+
+--------------------------------------------------
+
+🚨 CRITICAL BACKGROUND FIX (VERY IMPORTANT)
+
+YOU MUST APPLY THIS EXACTLY:
+
+<body class="bg-[#020617] text-white">
+
+❌ NEVER use:
+- bg-white
+- bg-gray
+- bg-blue
+- any light background
+
+❌ NEVER assign background colors to sections
+
+✔ ALL sections must inherit SAME dark background
+
+--------------------------------------------------
+
+🚨 TEXT VISIBILITY FIX
+
+ALL text MUST be visible:
+
+- Headings → text-white
+- Paragraphs → text-gray-300
+- Secondary → text-gray-400
+
+❌ DO NOT use dark text colors
+
+--------------------------------------------------
+
+🚨 NAVBAR (MATCH YOUR IMAGE)
+
+- sticky top
+- bg-[#020617]/80 backdrop-blur-md
+- border-b border-white/10
+
+LEFT:
+Logo:
+https://www.technozis.com/static/images/brand-logo.svg
+
+RIGHT:
+What we do
+Careers
+Business
+About Us
+Contact Us
+
+--------------------------------------------------
+
+🚨 HERO SECTION (EXACT STYLE LIKE YOUR IMAGE)
+
+- FULL WIDTH HERO IMAGE
+- WITH DARK OVERLAY
+
+IMAGE:
+https://images.unsplash.com/photo-1620712943543-bcc4688e7485
+
+Overlay MUST be:
+bg-black/70
+
+CONTENT (LEFT):
+
+Heading:
+About Us
+
+Paragraph:
+At Technozis, we’re not just solving problems — we’re enabling possibility.
+We are a global technology company focused on enterprise platforms,
+ServiceNow solutions, and digital transformation.
+We build scalable systems that help businesses operate efficiently and grow.
+
+--------------------------------------------------
+
+🚨 CTA SECTION (FIX YOUR BLUE ISSUE)
+
+IMPORTANT:
+
+❌ DO NOT use blue background
+
+✔ Use SAME dark background
+
+Layout:
+
+LEFT:
+Ready to Elevate Your Business with Technozis?
+
+RIGHT:
+With strong execution, platform expertise, and consulting approach,
+Technozis helps organizations transform operations and scale.
+
+BUTTON:
+bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-6 py-3
+
+--------------------------------------------------
+
+🚨 MILESTONES SECTION (MATCH YOUR IMAGE STYLE)
+
+- CENTERED
+- CLEAN TIMELINE LOOK
+- NO COLORED BACKGROUND
+
+Title:
+Our milestones
+
+USE EXACT CONTENT:
+
+2020  
+Technozis Inception  
+
+2023  
+Product Development for Fortune 500 customers  
+Opened offices in India — Gurgaon & Hisar  
+
+2024  
+Launched Professional & Consulting Services:  
+Digital Transformation, Security, Apps & Engineering, DevOps / Cloud, Analytics, Open AI, Cognitive AI  
+
+Industry Portfolio:  
+Telecom, Retail, Internet, Manufacturing, Supply Chain, GCC, BFSI  
+
+2025  
+Established COE in Apps & Engineering  
+(ServiceNow, OpenText, Salesforce, AWS, Azure)  
+
+Recognized as a Great Place to Work  
+Awarded by Dun & Bradstreet  
+Recognized by Successpreneur – Fastest Growing Digital Tech Company  
+
+Opened global offices in Dubai, Australia, and the UK  
+Signed major contracts in telecom  
+
+--------------------------------------------------
+
+🚨 JOIN SECTION (MATCH YOUR LAST IMAGE)
+
+LEFT:
+
+Heading:
+Join Us !
+
+Text:
+At Technozis, you're not just working — you're growing.
+We provide real opportunities in enterprise platforms,
+cloud technologies, and consulting.
+
+Button:
+Get In Touch →
+
+RIGHT IMAGE:
+https://images.unsplash.com/photo-1551434678-e076c223a692
+
+Image MUST be:
+rounded-2xl shadow-xl
+
+--------------------------------------------------
+
+🚨 FOOTER (VISIBLE + CLEAN)
+
+- bg-[#020617]
+- border-t border-white/10
+
+LEFT:
+Logo + description
+
+RIGHT:
+4 columns
+
+BOTTOM:
+
+Address:
+DCG2-0210, DLF Corporate Green, Sector 74A, Gurugram, Haryana, 122004
+
+Email:
+careers@technozis.com
+
+--------------------------------------------------
+
+🚨 ALIGNMENT RULE (MANDATORY)
+
+Use EVERYWHERE:
+
+max-w-7xl mx-auto px-6 md:px-12 py-20
+
+Use proper grid:
+
+grid md:grid-cols-2 gap-12
+
+--------------------------------------------------
+
+🚨 FINAL VALIDATION (VERY IMPORTANT)
+
+Before output, ensure:
+
+✔ Background is DARK everywhere  
+✔ No white sections exist  
+✔ Text is clearly visible  
+✔ Hero matches screenshot  
+✔ CTA is NOT blue background  
+✔ Layout aligned properly  
+
+--------------------------------------------------
+
+RETURN FULL HTML ONLY
+
+Contact us prompt
+You are a senior frontend developer.
+Generate a COMPLETE Contact Us page using HTML + TailwindCSS.
+--------------------------------------------------
+🚨 OUTPUT RULES
+- Return ONLY raw HTML
+- Start with <!DOCTYPE html>
+- MUST end with </html>
+- NO markdown, NO ```html, NO explanation
+--------------------------------------------------
+🚨 BACKGROUND LOCK (CRITICAL — MUST FOLLOW)
+APPLY EXACTLY:
+<body class="bg-[#020617] text-white min-h-screen">
+ALSO ADD IN <head>:
+<style>
+  body { background-color: #020617 !important; color: white !important; }
+</style>
+--------------------------------------------------
+🚨 STRICT RULES
+❌ NEVER use: bg-white (except form card), bg-gray, bg-blue sections
+✔ ALL sections inherit dark background #020617
+✔ ALL headings → text-white
+✔ ALL body text → text-gray-300 or text-gray-400
+✔ NO dark text on dark background anywhere
+--------------------------------------------------
+🚨 NAVBAR
+<nav class="sticky top-0 z-50 bg-[#020617]/90 backdrop-blur-xl border-b border-white/10">
+- Logo: <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-8">
+- Nav links: What we do | Careers | Business | About Us | Contact Us
+- Active link (Contact Us): class="text-blue-400 font-medium"
+- CTA button: "Get Started" with bg-blue-600 hover:bg-blue-700 rounded-lg px-5 py-2
+--------------------------------------------------
+🚨 HERO SECTION
+<section class="relative py-20 dot-grid overflow-hidden">
+- dot-grid CSS:
+  background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+- Glow orb top-right: bg-blue-500/10 w-96 h-96 blur-3xl rounded-full absolute
+- Small label badge: "GET IN TOUCH" → bg-blue-500/10 border border-blue-500/30 text-blue-400 rounded-full px-4 py-2 text-xs tracking-widest uppercase
+- H1: "Let's Connect" → text-5xl md:text-6xl font-bold text-white
+- Subtitle: "Whether you're a client, partner, or future team member — we'd love to hear from you."
+  → text-gray-400 text-lg max-w-xl
+--------------------------------------------------
+🚨 CONTACT SECTION
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-20">
+  <div class="grid md:grid-cols-2 gap-12 items-start">
+
+LEFT COLUMN — White Form Card:
+<div class="bg-white text-black rounded-2xl p-8 shadow-2xl">
+  <h2 class="text-2xl font-bold text-gray-900 mb-2">Send us a message</h2>
+  <p class="text-gray-500 text-sm mb-6">We'll get back to you within 24 hours.</p>
+  Fields (each with label + styled input border-gray-200 rounded-lg p-3 w-full):
+  1. Full Name → type="text" placeholder="Your full name"
+  2. Email ID → type="email" required placeholder="Work email address"
+  3. Inquiry Type → <select> with options:
+     Please Select (disabled default) |
+     ServiceNow Partner Inquiry |
+     Vendor Registration |
+     General Inquiry |
+     Hiring / Careers
+  4. Message → <textarea rows="5" placeholder="Tell us how we can help...">
+  5. Submit button → full width, bg-blue-600 hover:bg-blue-700 text-white
+     font-semibold py-3 rounded-xl text-base → "Send Message →"
+
+RIGHT COLUMN — Dark Info Panel (no bg override, inherits #020617):
+Wrap in: <div class="space-y-6">
+
+Card 1 — Hiring / Careers:
+<div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+  - Icon circle: bg-blue-500/20 rounded-full w-10 h-10 with ✉ SVG text-blue-400
+  - Label: "Hiring / Careers" text-white font-semibold
+  - Value: careers@technozis.com → text-blue-400 hover:underline mailto link
+
+Card 2 — Office Info:
+<div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+  - Icon: 📍 location SVG text-blue-400
+  - Label: "Office Info" text-white font-semibold
+  - Address 1: 210, Tower 2, DLF Corporate Greens, Sector 74A, Gurugram, 122004
+  - Address 2: Ground Floor, Tapasya Corp heights, Sector 126, Noida, UP 201313
+  - Phone: 📞 +91 9996600068
+
+Card 3 — Follow Us:
+<div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+  - Label: "Connect with us" text-white font-semibold mb-4
+  - Three pill buttons side by side (flex gap-3 flex-wrap):
+    LinkedIn | Instagram | WhatsApp Community
+    Each: border border-blue-500/30 text-blue-400 rounded-full px-4 py-2 text-sm
+    hover:bg-blue-500/10 transition
+--------------------------------------------------
+🚨 FOOTER (EXACT STRUCTURE — MATCH THIS PRECISELY)
+
+<footer style="background:#020617; color:white;" class="border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-8">
+
+    <!-- 5-column grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+
+      <!-- COL 1: Brand (lg:col-span-2) -->
+      - Logo: <img src="https://www.technozis.com/static/images/brand-logo.svg" class="h-8 mb-4">
+      - Tagline: "We help businesses build, deploy, and operate offering premium
+        professional services on various tech stacks." → text-gray-400 text-sm max-w-xs
+      - Social links (flex flex-col gap-2 mt-4 mb-4):
+        Each: flex items-center gap-2 text-gray-400 hover:text-blue-400 text-sm
+        * LinkedIn icon SVG → "Join our LinkedIn" → href="https://www.linkedin.com/company/technozis"
+        * Instagram icon SVG → "Join our Instagram" → href="https://www.instagram.com/technozis/"
+        * WhatsApp icon SVG → "Join our Community Group" → href="https://chat.whatsapp.com/Bu7OFoBvzV77wVNKyoiUjA"
+      - Region line: "India | Dubai | Australia | USA" → text-gray-500 text-xs mt-2
+      - Address: "DCG2-0210, DLF Corporate Green, Sector 74A, Gurugram, Haryana, 122004"
+        → text-gray-500 text-xs mt-1
+      - Email: "careers@technozis.com" → text-gray-500 text-xs mt-1
+
+      <!-- COL 2: Our Expertise -->
+      Heading: text-white font-semibold text-sm mb-5
+      Links (text-gray-400 hover:text-blue-400 text-sm, space-y-3):
+      ServiceNow | Salesforce | Data Analytics | Open AI |
+      Oracle | SAP | Cloud & Infra | Mobility & Development | Blockchain & Web3
+
+      <!-- COL 3: Business + Employees -->
+      "Business" heading
+      Links: Professional Services & Build Teams | Managed IT Services | Develop & Operate
+      "Employees" heading (mt-8)
+      Links: Careers | Community | Culture | Open Roles
+
+      <!-- COL 4: Company -->
+      "Company" heading
+      Links: About Us
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-500 text-xs">Copyright © 2025 Technozis. | All Rights Reserved</p>
+      <div class="flex gap-6">
+        <a href="#" class="text-gray-500 hover:text-white text-xs transition-colors">Terms & Conditions</a>
+        <a href="#" class="text-gray-500 hover:text-white text-xs transition-colors">Privacy Policy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+--------------------------------------------------
+🚨 FINAL VALIDATION — FIX BEFORE RETURNING
+✔ body background is #020617 dark — no white sections except form card
+✔ Navbar sticky with logo + nav links + Get Started button
+✔ Hero has dot-grid, glow orb, badge, H1, subtitle
+✔ Contact section has white form card LEFT + dark info cards RIGHT
+✔ Footer has 5-column grid with brand, expertise, business, employees, company
+✔ Footer bottom bar has copyright + terms + privacy
+✔ All text visible — no dark text on dark bg
+✔ No missing closing tags
+✔ LinkedIn, Instagram, WhatsApp SVG icons present in footer
+✔ No markdown, no fences, no explanation
+--------------------------------------------------
+RETURN FULL RAW HTML ONLY

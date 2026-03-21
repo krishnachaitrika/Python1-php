@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Technozis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        * { font-family: 'Inter', sans-serif; }
+        .dot-grid {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+        .glow-blue { text-shadow: 0 0 30px rgba(59,130,246,0.5); }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .stat-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); }
+        .timeline-dot { box-shadow: 0 0 0 4px rgba(59,130,246,0.2); }
+        .btn-primary { background: linear-gradient(135deg, #3b82f6, #2563eb); transition: all 0.3s ease; }
+        .btn-primary:hover { background: linear-gradient(135deg, #2563eb, #1d4ed8); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(16,185,129,0.3); }
+        .expertise-tag { background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); transition: all 0.2s; }
+        .expertise-tag:hover { background: rgba(59,130,246,0.2); border-color: rgba(59,130,246,0.4); }
+        .section-divider { background: linear-gradient(90deg, transparent, rgba(59,130,246,0.5), transparent); height: 1px; }
+        .cert-badge { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+    </style>
+</head>
+<body class="bg-[#020617] text-white">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-[#020617]/90 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <div>
+                <img src="https://www.technozis.com/static/images/brand-logo.svg" alt="Technozis Logo" class="h-8">
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm text-gray-300">
+                <a href="#" class="hover:text-white transition-colors">What we do</a>
+                <a href="#" class="hover:text-white transition-colors">Careers</a>
+                <a href="#" class="hover:text-white transition-colors">Business</a>
+                <a href="#" class="text-blue-400 font-medium">About Us</a>
+                <a href="#" class="hover:text-white transition-colors">Contact Us</a>
+                <a href="#" class="btn-primary text-white px-5 py-2 rounded-lg text-sm font-medium">Get Started</a>
+            </div>
+            <!-- Mobile menu btn -->
+            <button class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[70vh] flex items-center overflow-hidden dot-grid">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#020617] via-[#0a1628] to-[#020617]"></div>
+        <!-- Glow orbs -->
+        <div class="absolute top-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 grid md:grid-cols-2 gap-16 items-center w-full">
+            <!-- Left content -->
+            <div>
+                <span class="inline-block bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold px-4 py-2 rounded-full mb-6 tracking-widest uppercase">About Technozis</span>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight glow-blue">
+                    Empowering <span class="text-blue-400">Digital</span> Transformation
+                </h1>
+                <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                    Technozis empowers organizations to accelerate their digital transformation by providing expert-driven solutions tailored to evolving business needs. Our premium professional services are trusted by Fortune 500 companies worldwide.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="btn-primary text-white px-8 py-3 rounded-xl font-semibold">Explore Services</a>
+                    <a href="#" class="border border-white/20 hover:border-white/40 text-white px-8 py-3 rounded-xl font-semibold transition-colors">Meet the Team</a>
+                </div>
+            </div>
+
+            <!-- Right: Hero Image -->
+            <div class="relative hidden md:block">
+                <div class="rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+                         alt="Technozis Team at Work"
+                         class="w-full h-[480px] object-cover rounded-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Who We Are -->
+    <section class="max-w-7xl mx-auto px-6 md:px-12 py-24">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-blue-400 text-xs font-semibold tracking-widest uppercase mb-4 block">Who We Are</span>
+                <h2 class="text-4xl font-bold mb-6 leading-tight">Run a Marathon <br><span class="text-blue-400">or do a Sprint</span></h2>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    We help businesses build, deploy, and operate offering premium professional services on various tech stacks. In a time of rapid digital transformation, Technozis stands out with the perfect blend of domain expertise, real-world project delivery, and access to top-tier engineering talent.
+                </p>
+                <p class="text-gray-400 leading-relaxed mb-8">
+                    Whether it's building robust enterprise systems, scaling development teams, or driving innovation across ServiceNow, data engineering, and full-stack development — Technozis delivers with speed, precision, and reliability.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="expertise-tag text-blue-300 text-xs px-3 py-1.5 rounded-full">ServiceNow</span>
+                    <span class="expertise-tag text-blue-300 text-xs px-3 py-1.5 rounded-full">Salesforce</span>
+                    <span class="expertise-tag text-blue-300 text-xs px-3 py-1.5 rounded-full">Data Analytics</span>
+                    <span class="expertise-tag text-blue-300 text-xs px-3 py-1.5 rounded-full">Open AI</span>
+                    <span class="expertise-tag text-blue-300 text-xs px-3 py-1.5 rounded-full">Oracle</span>
+                    <span class="expertise-tag text-blue-300 text-xs px-3 py-1.5 rounded-full">SAP</span>
+                    <span class="expertise-tag text-blue-300 text-xs px-3 py-1.5 rounded-full">Cloud & Infra</span>
+                    <span class="expertise-tag text-blue-300 text-xs px-3 py-1.5 rounded-full">Mobility & Dev</span>
+                    <span class="expertise-tag text-blue-300 text-xs px-3 py-1.5 rounded-full">Blockchain & Web3</span>
+                </div>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team collaboration" class="rounded-2xl shadow-2xl w-full h-80 object-cover">
+                <div class="grid grid-cols-2 gap-4 mt-4">
+                    <div class="stat-card rounded-xl p-4 text-center">
+                        <div class="text-blue-400 font-bold text-lg">Fortune 500</div>
+                        <div class="text-gray-500 text-xs mt-1">Trusted By</div>
+                    </div>
+                    <div class="stat-card rounded-xl p-4 text-center">
+                        <div class="text-blue-400 font-bold text-lg">Global Reach</div>
+                        <div class="text-gray-500 text-xs mt-1">India · Dubai · AU · USA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones / Timeline -->
+    <section class="bg-[#060e1f] py-24">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16">
+                <span class="text-blue-400 text-xs font-semibold tracking-widest uppercase mb-4 block">Our Journey</span>
+                <h2 class="text-4xl font-bold">Milestones That <span class="text-blue-400">Define Us</span></h2>
+            </div>
+
+            <div class="relative">
+                <!-- Center line -->
+                <div class="absolute left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-blue-500/50 via-blue-500/20 to-transparent h-full hidden md:block"></div>
+
+                <div class="space-y-16">
+                    <!-- 2020 -->
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="md:text-right md:pr-12 relative">
+                            <div class="inline-block bg-blue-500/10 border border-blue-500/20 rounded-2xl p-6 text-right">
+                                <span class="text-blue-400 text-4xl font-bold block mb-2">2020</span>
+                                <h3 class="text-white font-semibold text-lg mb-2">Technozis Founded</h3>
+                                <p class="text-gray-400 text-sm">Established with a vision to transform enterprise IT through innovative ServiceNow and cloud solutions.</p>
+                            </div>
+                            <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[4px] w-4 h-4 rounded-full bg-blue-500 border-4 border-[#060e1f] timeline-dot hidden md:block"></div>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="hidden md:block"></div>
+                        <div class="md:pl-12 relative">
+                            <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[4px] w-4 h-4 rounded-full bg-blue-500 border-4 border-[#060e1f] timeline-dot hidden md:block"></div>
+                            <div class="inline-block bg-blue-500/10 border border-blue-500/20 rounded-2xl p-6">
+                                <span class="text-blue-400 text-4xl font-bold block mb-2">2023</span>
+                                <h3 class="text-white font-semibold text-lg mb-2">Fortune 500 Delivery & India Expansion</h3>
+                                <p class="text-gray-400 text-sm mb-2">Delivered ServiceNow Solutions to Fortune 500 Clients.</p>
+                                <p class="text-gray-400 text-sm">Expanded Operations across India with offices in Gurugram and Noida.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="md:text-right md:pr-12 relative">
+                            <div class="inline-block bg-blue-500/10 border border-blue-500/20 rounded-2xl p-6 text-right">
+                                <span class="text-blue-400 text-4xl font-bold block mb-2">2024</span>
+                                <h3 class="text-white font-semibold text-lg mb-2">Consulting & Industry Expansion</h3>
+                                <p class="text-gray-400 text-sm mb-2">Launched comprehensive consulting: Digital Transformation, Cloud Migration, and IT Service Management.</p>
+                                <p class="text-gray-400 text-sm">Expanded into Telecom, Retail, Manufacturing, and Financial Services.</p>
+                            </div>
+                            <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[4px] w-4 h-4 rounded-full bg-blue-500 border-4 border-[#060e1f] timeline-dot hidden md:block"></div>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+
+                    <!-- 2025 -->
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="hidden md:block"></div>
+                        <div class="md:pl-12 relative">
+                            <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[4px] w-4 h-4 rounded-full bg-blue-500 border-4 border-[#060e1f] timeline-dot hidden md:block"></div>
+                            <div class="inline-block bg-blue-500/10 border border-blue-500/20 rounded-2xl p-6">
+                                <span class="text-blue-400 text-4xl font-bold block mb-2">2025</span>
+                                <h3 class="text-white font-semibold text-lg mb-2">Global Excellence & Recognition</h3>
+                                <p class="text-gray-400 text-sm mb-2">Established Center of Excellence for ServiceNow and Cloud Solutions.</p>
+                                <p class="text-gray-400 text-sm mb-2">Certified Great Place to Work® and D-U-N-S® registered.</p>
+                                <p class="text-gray-400 text-sm">Global offices in Dubai, Australia, and USA with strategic tech partnerships.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join the Team -->
+    <section class="max-w-7xl mx-auto px-6 md:px-12 py-24">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-blue-400 text-xs font-semibold tracking-widest uppercase mb-4 block">Careers</span>
+                <h2 class="text-4xl font-bold mb-6">Join the <span class="text-blue-400">Technozis</span> Team</h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                    At Technozis, we offer opportunities for growth and development in ServiceNow, cloud technologies, and digital transformation. Join our community of 50,000+ tech practitioners and contribute to the success of Fortune 500 clients worldwide.
+                </p>
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <div class="stat-card rounded-xl px-5 py-3 text-sm text-gray-300">🌍 India · Dubai · Australia · USA</div>
+                    <div class="stat-card rounded-xl px-5 py-3 text-sm text-gray-300">👥 50K+ Community</div>
+                </div>
+                <a href="#" class="inline-flex items-center btn-primary text-white px-8 py-3 rounded-xl font-semibold gap-2">
+                    Explore Open Roles
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" alt="People working at Technozis" class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+                <div class="absolute -bottom-4 -left-4 stat-card rounded-xl p-4 shadow-xl">
+                    <div class="text-blue-400 font-bold">Great Place to Work®</div>
+                    <div class="text-gray-400 text-xs">Officially Certified 2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="bg-gradient-to-r from-blue-900/40 to-blue-900/20 border-y border-white/10 py-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-4xl font-bold mb-4">Want to scale with us?</h2>
+            <p class="text-gray-400 text-lg mb-8">Talk to one of our solution experts and start building your team.</p>
+            <a href="#" class="btn-primary text-white px-10 py-4 rounded-xl font-semibold text-lg inline-block">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#020617] border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+
+                <!-- Brand col -->
+                <div class="lg:col-span-2">
+                    <img src="https://www.technozis.com/static/images/brand-logo.svg" alt="Technozis Logo" class="h-8 mb-4">
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
+                        We help businesses build, deploy, and operate offering premium professional services on various tech stacks.
+                    </p>
+                    <!-- Social links -->
+                    <div class="flex flex-col gap-2 mb-4">
+                        <a href="https://www.linkedin.com/company/technozis" class="flex items-center gap-2 text-gray-400 hover:text-blue-400 text-sm transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            Join our LinkedIn
+                        </a>
+                        <a href="https://www.instagram.com/technozis/" class="flex items-center gap-2 text-gray-400 hover:text-blue-400 text-sm transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            Join our Instagram
+                        </a>
+                        <a href="https://chat.whatsapp.com/Bu7OFoBvzV77wVNKyoiUjA" class="flex items-center gap-2 text-gray-400 hover:text-blue-400 text-sm transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Join our Community Group
+                        </a>
+                    </div>
+                    <p class="text-gray-500 text-xs">India | Dubai | Australia | USA</p>
+                    <p class="text-gray-500 text-xs mt-1">DCG2-0210, DLF Corporate Green, Sector 74A, Gurugram, Haryana, 122004</p>
+                    <p class="text-gray-500 text-xs mt-1">careers@technozis.com</p>
+                </div>
+
+                <!-- Our Expertise -->
+                <div>
+                    <h3 class="text-white font-semibold mb-5 text-sm">Our Expertise</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">ServiceNow</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Salesforce</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Data Analytics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Open AI</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Oracle</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">SAP</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Cloud & Infra</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Mobility & Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Blockchain & Web3</a></li>
+                    </ul>
+                </div>
+
+                <!-- Business -->
+                <div>
+                    <h3 class="text-white font-semibold mb-5 text-sm">Business</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Professional Services & Build Teams</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Managed IT Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Develop & Operate</a></li>
+                    </ul>
+
+                    <h3 class="text-white font-semibold mb-5 mt-8 text-sm">Employees</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Community</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Culture</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">Open Roles</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-semibold mb-5 text-sm">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 text-sm transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-xs">Copyright © 2025 Technozis. | All Rights Reserved</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-500 hover:text-white text-xs transition-colors">Terms & Conditions</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-xs transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
