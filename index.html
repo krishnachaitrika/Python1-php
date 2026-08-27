@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>I'm Sorry!</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(135deg,#e6d7ff,#c9a0ff,#a566ff,#7b2ff7);
+    background-size:400% 400%;
+    animation: bgshift 10s ease infinite;
+    overflow:hidden;
+    font-family:'Comic Sans MS', 'Trebuchet MS', sans-serif;
+    text-align:center;
+  }
+  @keyframes bgshift {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+  .marquee-wrap {
+    width:100%;
+    overflow:hidden;
+    white-space:nowrap;
+    position:absolute;
+    top:8%;
+  }
+  .marquee {
+    display:inline-block;
+    font-size:3rem;
+    font-weight:bold;
+    color:white;
+    text-shadow:2px 2px 0 #5e2bff;
+    animation: scroll 8s linear infinite;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+  }
+  .card {
+    background:white;
+    border-radius:20px;
+    padding:40px 50px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    max-width:480px;
+    transform:scale(0);
+    animation: pop 0.8s 0.3s cubic-bezier(.68,-0.55,.27,1.55) forwards;
+  }
+  @keyframes pop { to { transform:scale(1); } }
+  .card h1 {
+    font-size:2.2rem;
+    color:#7b2ff7;
+    animation: wiggle 1.5s ease infinite;
+    display:inline-block;
+  }
+  @keyframes wiggle {
+    0%,100% { transform:rotate(-3deg); }
+    50% { transform:rotate(3deg); }
+  }
+  .card p {
+    margin-top:15px;
+    font-size:1.1rem;
+    color:#444;
+    line-height:1.5;
+  }
+  .emoji-row {
+    margin-top:15px;
+    font-size:1.8rem;
+  }
+  .emoji-row span {
+    display:inline-block;
+    animation: bounce 1s infinite;
+  }
+  .emoji-row span:nth-child(2){ animation-delay:0.1s; }
+  .emoji-row span:nth-child(3){ animation-delay:0.2s; }
+  .emoji-row span:nth-child(4){ animation-delay:0.3s; }
+  @keyframes bounce {
+    0%,100%{ transform:translateY(0);}
+    50%{ transform:translateY(-12px);}
+  }
+  button {
+    margin-top:25px;
+    padding:12px 28px;
+    font-size:1rem;
+    border:none;
+    border-radius:30px;
+    background:#7b2ff7;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow:0 6px 15px rgba(123,47,247,0.5);
+    transition:transform 0.2s;
+  }
+  button:hover { transform:scale(1.08); }
+  #msg {
+    margin-top:15px;
+    font-size:1.2rem;
+    font-weight:bold;
+    color:#7b2ff7;
+    opacity:0;
+    transition:opacity 0.4s;
+  }
+  .btn-row {
+    position:relative;
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    height:60px;
+  }
+  #noBtn {
+    position:absolute;
+    background:#ccc;
+    color:#555;
+    border:none;
+    border-radius:30px;
+    padding:12px 28px;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:left 0.2s ease, top 0.2s ease;
+  }
+  .confetti {
+    position:fixed;
+    top:-10px;
+    font-size:1.5rem;
+    animation: fall linear forwards;
+  }
+  @keyframes fall {
+    to { transform:translateY(110vh) rotate(360deg); opacity:0.8; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="marquee-wrap">
+    <div class="marquee">🙈 I MESSED UP... AND I'M REALLY SORRY 🙈&nbsp;&nbsp;&nbsp;&nbsp;🙈 I MESSED UP... AND I'M REALLY SORRY 🙈</div>
+  </div>
+
+  <div class="card">
+    <h1>Oops. My bad. 😅</h1>
+    <p>I know I hurt you, and that's on me — no excuses.<br>
+    I'm sorry for real. Not "sorry-but" sorry. Just sorry.<br>
+    You mean a lot to me and I miss your face.</p>
+    <div class="emoji-row">
+      <span>🙏</span><span>🥺</span><span>💐</span><span>🫂</span>
+    </div>
+    <p style="margin-top:20px; font-weight:bold;">Do you forgive me?</p>
+    <div class="btn-row" id="btnRow">
+      <button onclick="forgive()">Yes 🥹</button>
+      <button id="noBtn" onmouseover="dodge()" ontouchstart="dodge()">No 😤</button>
+    </div>
+    <div id="msg">Yay!! Best friend ever 🎉💖</div>
+  </div>
+
+<script>
+function dodge(){
+  const row = document.getElementById('btnRow');
+  const noBtn = document.getElementById('noBtn');
+  const maxX = row.clientWidth - noBtn.offsetWidth;
+  const maxY = row.clientHeight - noBtn.offsetHeight;
+  const newX = Math.random() * Math.max(maxX, 0);
+  const newY = Math.random() * Math.max(maxY, 0);
+  noBtn.style.left = newX + 'px';
+  noBtn.style.top = newY + 'px';
+}
+function forgive(){
+  document.getElementById('msg').style.opacity = 1;
+  const emojis = ['🎉','💖','✨','🥳','🌸','🎊'];
+  for(let i=0;i<40;i++){
+    setTimeout(()=>{
+      const c = document.createElement('div');
+      c.className='confetti';
+      c.style.left = Math.random()*100+'vw';
+      c.style.animationDuration = (2+Math.random()*2)+'s';
+      c.innerText = emojis[Math.floor(Math.random()*emojis.length)];
+      document.body.appendChild(c);
+      setTimeout(()=>c.remove(),4000);
+    }, i*40);
+  }
+}
+</script>
+</body>
+</html>
